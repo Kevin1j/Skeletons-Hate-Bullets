@@ -1,0 +1,211 @@
+[gd_scene load_steps=41 format=3 uid="uid://dxw6vjf3lj0da"]
+
+[ext_resource type="Script" uid="uid://br36pnv284m4w" path="res://scripts/enemy_scripts/sword_skeleton.gd" id="1_1jp34"]
+[ext_resource type="Texture2D" uid="uid://c7t2crxjfg0qh" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0001.png" id="2_fl3t7"]
+[ext_resource type="Texture2D" uid="uid://i0eix75qo7fn" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0002.png" id="3_xfl05"]
+[ext_resource type="Texture2D" uid="uid://kdnnjfre3f7y" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0003.png" id="4_a0ve8"]
+[ext_resource type="Texture2D" uid="uid://yl0brt3ydqyj" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0004.png" id="5_7kmvy"]
+[ext_resource type="Texture2D" uid="uid://bnmeu5cn37b47" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0005.png" id="6_5q4g6"]
+[ext_resource type="Texture2D" uid="uid://byvqjsk0krucn" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0006.png" id="7_x7xyl"]
+[ext_resource type="Texture2D" uid="uid://c3nfr1bx24r3d" path="res://sprites/enemies/sword_skeleton/attack animation/skeleton_0007.png" id="8_gy8in"]
+[ext_resource type="Texture2D" uid="uid://crsi7b8c1qw5t" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0001.png" id="9_mbcoo"]
+[ext_resource type="Texture2D" uid="uid://ctn7ofq1jrjv" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0002.png" id="10_0rgps"]
+[ext_resource type="Texture2D" uid="uid://cslra4mamvo7" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0003.png" id="11_kmtbx"]
+[ext_resource type="Texture2D" uid="uid://cs25vcxafyutc" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0004.png" id="12_hdtbg"]
+[ext_resource type="Texture2D" uid="uid://df67e5wm8ndsb" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0005.png" id="13_ybnde"]
+[ext_resource type="Texture2D" uid="uid://835nbgv4wj0r" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0006.png" id="14_mbue8"]
+[ext_resource type="Texture2D" uid="uid://rhnswa1j0hqh" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0007.png" id="15_jcrfq"]
+[ext_resource type="Texture2D" uid="uid://cudr7sb3dddgx" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0008.png" id="16_ljv3m"]
+[ext_resource type="Texture2D" uid="uid://cgd82s4vig5uv" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0009.png" id="17_ma0qr"]
+[ext_resource type="Texture2D" uid="uid://dm3cnicafahst" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0010.png" id="18_05wjw"]
+[ext_resource type="Texture2D" uid="uid://lc0gh5vy6ugt" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0011.png" id="19_6824u"]
+[ext_resource type="Texture2D" uid="uid://byii8d17gcggs" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0012.png" id="20_hlymt"]
+[ext_resource type="Texture2D" uid="uid://1x1sirxokgf" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0013.png" id="21_0m4ss"]
+[ext_resource type="Texture2D" uid="uid://cjqojy04pbv4y" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0014.png" id="22_em3ak"]
+[ext_resource type="Texture2D" uid="uid://dl32gv07ixvon" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0015.png" id="23_ovp32"]
+[ext_resource type="Texture2D" uid="uid://dblgubry50gto" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0016.png" id="24_8ogvy"]
+[ext_resource type="Texture2D" uid="uid://bg4nh1n04ulsw" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0017.png" id="25_ydut8"]
+[ext_resource type="Texture2D" uid="uid://clji0cuas7sor" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0018.png" id="26_yby5g"]
+[ext_resource type="Texture2D" uid="uid://cuec3xfrlfis5" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0019.png" id="27_pgvbr"]
+[ext_resource type="Texture2D" uid="uid://bth7n21mmrcd2" path="res://sprites/enemies/sword_skeleton/death animation/SwordSkeleton_Die_0020.png" id="28_3a1uu"]
+[ext_resource type="Texture2D" uid="uid://ba6dp73e2b5ee" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0001.png" id="29_jbnil"]
+[ext_resource type="Texture2D" uid="uid://cf0qxu5pqdhwf" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0002.png" id="30_bem3n"]
+[ext_resource type="Texture2D" uid="uid://bpjmsaarchqw2" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0003.png" id="31_n50mv"]
+[ext_resource type="Texture2D" uid="uid://qu2qb6t8hfk3" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0004.png" id="32_wmgif"]
+[ext_resource type="Texture2D" uid="uid://o77bj6k3p6o6" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0005.png" id="33_fn1t7"]
+[ext_resource type="Texture2D" uid="uid://p0x82j0p14bw" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0006.png" id="34_etq4p"]
+[ext_resource type="Texture2D" uid="uid://1a4gwddi6uey" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0007.png" id="35_212wl"]
+[ext_resource type="Texture2D" uid="uid://bolp0s23ten3r" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0008.png" id="36_fkpog"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwa01"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fl3t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xfl05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_a0ve8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7kmvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5q4g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x7xyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gy8in")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mbcoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0rgps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kmtbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hdtbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ybnde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mbue8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jcrfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ljv3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ma0qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_05wjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6824u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hlymt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_0m4ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_em3ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ovp32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8ogvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ydut8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_yby5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pgvbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3a1uu")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_jbnil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bem3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_n50mv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_wmgif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fn1t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_etq4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_212wl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fkpog")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_805g7"]
+size = Vector2(6.89061, 17.083)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_805g7"]
+radius = 2.00976
+height = 4.30663
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl3t7"]
+size = Vector2(13, 26)
+
+[node name="SwordSkeleton" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_1jp34")
+metadata/_custom_type_script = "uid://olhh212fgkw6"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mwa01")
+animation = &"attack"
+frame = 5
+frame_progress = 0.27753
+offset = Vector2(3.481, -4.002)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 100.0
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -4.59374)
+shape = SubResource("RectangleShape2D_805g7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.72265)
+shape = SubResource("CapsuleShape2D_805g7")
+
+[node name="SwordHitBox" type="Area2D" parent="."]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox"]
+position = Vector2(8.5, -5)
+shape = SubResource("RectangleShape2D_fl3t7")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_shape_entered" from="HitBox" to="." method="_on_hit_box_area_shape_entered"]
+[connection signal="body_entered" from="SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]

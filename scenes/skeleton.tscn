@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqnsqqbmpjk5j"]
+
+[ext_resource type="Script" uid="uid://dwqrqtf1g3px0" path="res://scripts/skeleton.gd" id="1_vqc8v"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pbvs3"]
+load_path = "res://.godot/imported/skeleton_0001.png-813ba10e73587cd920ef8ba1e2b7b4fe.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_txkty"]
+load_path = "res://.godot/imported/skeleton_0002.png-a7b60f16a4fd5e64f9b4b9486165f5f8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ivqcw"]
+load_path = "res://.godot/imported/skeleton_0003.png-06af2f15f06caeffb3f8c6fd57c4286c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bnirc"]
+load_path = "res://.godot/imported/skeleton_0004.png-b64dbbbcf39a3c73bc76c81972b5b4cd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5pgwy"]
+load_path = "res://.godot/imported/skeleton_0005.png-2b4e883ec1f147882c9c214d65c30c23.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ssl1b"]
+load_path = "res://.godot/imported/skeleton_0006.png-6a7e6b41ab1d5ad3b90e2234470a51a8.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w4hcs"]
+load_path = "res://.godot/imported/skeleton_0007.png-7737b30b10c33ad5b083824051ddfe6b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_haw2w"]
+load_path = "res://.godot/imported/skeleton_0008.png-6c28ce090a481264962357a73729b64e.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pyp1f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_pbvs3")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_txkty")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ivqcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bnirc")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_5pgwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ssl1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_w4hcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_haw2w")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ixog"]
+size = Vector2(5.5, 3.25)
+
+[node name="Skeleton" type="CharacterBody2D"]
+scale = Vector2(23.899, 23.899)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_vqc8v")
+
+[node name="Visual" type="Node2D" parent="."]
+position = Vector2(0, 0.1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual"]
+sprite_frames = SubResource("SpriteFrames_pyp1f")
+animation = &"walk"
+centered = false
+offset = Vector2(-25.533, -39.157)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 1.375)
+shape = SubResource("RectangleShape2D_4ixog")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 8.0
+target_desired_distance = 8.0
+path_max_distance = 284.0
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-2.55241, 2.88715, -2.51057, -1.12975, -3.47295, -1.08791, -3.51479, -6.0672, -2.55241, -6.10904, -2.55241, -7.15511, -0.418428, -7.11327, -0.543956, -7.95012, -1.59002, -8.07565, -1.59002, -9.12172, -2.55241, -9.16356, -2.51057, -13.0968, -1.59002, -13.0968, -1.50634, -13.8081, 3.47295, -13.8081, 3.47295, -13.0968, 4.51902, -13.0549, 4.43533, -9.20541, 6.44378, -7.99197, 6.44378, -1.08791, 4.64455, -1.00423, 4.47717, -2.00845, 3.43111, -2.09214, 2.46872, -1.08791, 2.51057, 2.97084)
