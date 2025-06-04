@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://4bhidvvwu12w"]
+[gd_scene load_steps=12 format=4 uid="uid://4bhidvvwu12w"]
 
 [ext_resource type="Texture2D" uid="uid://1je3wdth7qaw" path="res://sprites/env_tiles/tilemap_packed.png" id="1_sugp2"]
-[ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scenes/main.gd" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scripts/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://6u05j6pf16h2" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dxw6vjf3lj0da" path="res://scenes/enemy_scenes/sword_skeleton.tscn" id="2_tbgi4"]
-[ext_resource type="Script" uid="uid://drh6n3qig0l87" path="res://scenes/enemy_spawner.gd" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://drh6n3qig0l87" path="res://scripts/enemy_spawner.gd" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bhefkxetl40nd" path="res://scenes/machine_gun_turret.tscn" id="6_tefeu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_sugp2")
@@ -128,3 +129,7 @@ script = ExtResource("4_jyhfs")
 SwordSkeleton = ExtResource("2_tbgi4")
 
 [node name="UILayer" type="CanvasLayer" parent="." groups=["ui"]]
+
+[node name="MachineGunTurret" parent="." instance=ExtResource("6_tefeu")]
+position = Vector2(2128, -489)
+scale = Vector2(3.261, 3.261)

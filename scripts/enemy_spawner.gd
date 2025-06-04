@@ -1,6 +1,6 @@
 extends Node2D
 
-var interval = .2 #seconds between enemy spawn
+var interval = 5 #seconds between enemy spawn
 @export var SwordSkeleton: PackedScene 
 
 

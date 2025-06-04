@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhefkxetl40nd"]
+
+[ext_resource type="Texture2D" uid="uid://bkkwcoq10jjow" path="res://sprites/weapons/BasicBase.png" id="1_7igtk"]
+[ext_resource type="Script" uid="uid://dttm8m6oikdv5" path="res://scripts/machine_gun_turret.gd" id="1_iehel"]
+[ext_resource type="Texture2D" uid="uid://bv0djwrft6wi8" path="res://sprites/weapons/MG_W.png" id="2_jj3lf"]
+[ext_resource type="Texture2D" uid="uid://cb8rfmiitqft6" path="res://sprites/weapons/MG_E.png" id="3_1whnv"]
+[ext_resource type="Texture2D" uid="uid://c4wxmvs0ea4ux" path="res://sprites/weapons/MG_N.png" id="3_rgc3u"]
+[ext_resource type="Texture2D" uid="uid://dfgji45i6ndw5" path="res://sprites/weapons/MG_S.png" id="4_c4kot"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7igtk"]
+height = 34.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ckkjp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1whnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c4kot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jj3lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rgc3u")
+}],
+"loop": true,
+"name": &"rotate",
+"speed": 5.0
+}]
+
+[node name="MachineGunTurret" type="StaticBody2D"]
+script = ExtResource("1_iehel")
+
+[node name="Base" type="Sprite2D" parent="."]
+texture = ExtResource("1_7igtk")
+offset = Vector2(-0.488, -1.503)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 14)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_7igtk")
+
+[node name="Rotator" type="Node2D" parent="."]
+
+[node name="MachineGun" type="AnimatedSprite2D" parent="Rotator"]
+sprite_frames = SubResource("SpriteFrames_ckkjp")
+animation = &"rotate"
+frame_progress = 0.743616
+
+[node name="MuzzlePoint" type="Marker2D" parent="Rotator/MachineGun"]
+position = Vector2(26, -8)
