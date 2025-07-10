@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btpq2e5qg7mvt"]
 
-[ext_resource type="Script" uid="uid://bmfll1r5e6bwk" path="res://scenes/score_counter.gd" id="1_v1o25"]
+[ext_resource type="Script" uid="uid://bg58gmf46lfcs" path="res://scripts/score_counter.gd" id="1_v1o25"]
 
 [node name="Control" type="Control"]
 layout_mode = 3

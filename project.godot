@@ -14,6 +14,10 @@ config/name="Skeletons Hate Bullets"
 run/main_scene="uid://4bhidvvwu12w"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 
+[autoload]
+
+GlobalValues="*res://scripts/global_values.gd"
+
 [display]
 
 window/size/viewport_width=1920

@@ -15,13 +15,15 @@ func take_damage(amount):
 	current_health -= amount
 	if current_health <= 0:
 		die()
-		
+	
+	
 
 func die():
 	if is_dead:
 		return
 	is_dead = true
 	$AnimatedSprite2D.play("die")
+	GlobalValues.score += 1
 	
 func _on_animated_sprite_2d_animation_finished():
 	if is_dead:
