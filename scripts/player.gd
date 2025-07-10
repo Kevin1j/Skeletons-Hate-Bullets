@@ -45,15 +45,10 @@ func _physics_process(delta):
 	else: 
 		$HealthBar.visible = false
 	if current_health <= 0:
-		var ui_layer = get_tree().get_first_node_in_group("ui")
-		var label := Label.new()
-		label.text = "YOU DIED"
-		label.modulate = Color.RED
-		label.set_anchors_preset(Control.PRESET_CENTER)
-		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-		label.add_theme_font_size_override("font_size", 48)
-		ui_layer.add_child(label)
+		#Implement game over UI
+		$GameOver.visible = true
+		pass
+		
 
 
 func take_damage(amount):

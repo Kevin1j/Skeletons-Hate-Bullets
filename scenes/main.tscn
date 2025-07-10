@@ -128,8 +128,12 @@ position = Vector2(2328, -188)
 script = ExtResource("4_jyhfs")
 SwordSkeleton = ExtResource("2_tbgi4")
 
-[node name="UILayer" type="CanvasLayer" parent="." groups=["ui"]]
-
 [node name="MachineGunTurret" parent="." instance=ExtResource("6_tefeu")]
 position = Vector2(2128, -489)
 scale = Vector2(3.261, 3.261)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(313, 1698, 4268, 1693, 4281, -2484, 315, -2485, 313, 1697, 311, 1697, 298, -2521, 4311, -2512, 4296, 1721, 313, 1699)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://6u05j6pf16h2"]
+[gd_scene load_steps=28 format=3 uid="uid://6u05j6pf16h2"]
 
 [ext_resource type="Script" uid="uid://ixe2nj28ui41" path="res://scripts/player.gd" id="1_sweqy"]
+[ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/restart_prompt.tscn" id="2_a38lo"]
 [ext_resource type="Texture2D" uid="uid://cqx0h3nfpo3fw" path="res://sprites/player/blode_dude_0001.png" id="2_bwjto"]
 [ext_resource type="Texture2D" uid="uid://bdhvi5ni3yawl" path="res://sprites/player/blode_dude_0002.png" id="3_606se"]
 [ext_resource type="Texture2D" uid="uid://dw2k20qe172fl" path="res://sprites/player/blode_dude_0003.png" id="4_u1c27"]
@@ -21,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bp0csjj7rai7j" path="res://sprites/player/blode_dude_walking_0004.png" id="18_7ahtn"]
 [ext_resource type="Script" uid="uid://dceyt0wya2eow" path="res://scripts/ak_47.gd" id="20_pbfsw"]
 [ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/bullet_basic.tscn" id="21_5tmop"]
+[ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/score_counter.tscn" id="23_4ni07"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -99,6 +101,14 @@ bg_color = Color(1, 0, 0, 1)
 y_sort_enabled = true
 script = ExtResource("1_sweqy")
 
+[node name="GameOver" parent="." instance=ExtResource("2_a38lo")]
+visible = false
+z_index = 8
+y_sort_enabled = true
+offset_right = -125.0
+offset_bottom = -75.0
+scale = Vector2(0.216, 0.216)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 scale = Vector2(0.384, 0.384)
@@ -124,6 +134,7 @@ position = Vector2(-0.18, -0.077)
 shape = SubResource("RectangleShape2D_bwjto")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2, 0)
 zoom = Vector2(0.564, 0.564)
 limit_smoothed = true
 
@@ -139,3 +150,10 @@ theme_override_styles/background = SubResource("StyleBoxFlat_i4ail")
 theme_override_styles/fill = SubResource("StyleBoxFlat_a38lo")
 value = 100.0
 show_percentage = false
+
+[node name="Score" parent="." instance=ExtResource("23_4ni07")]
+offset_left = -153.0
+offset_top = -86.0
+offset_right = -153.0
+offset_bottom = -86.0
+scale = Vector2(0.82, 0.82)

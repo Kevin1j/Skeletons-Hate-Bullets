@@ -170,7 +170,7 @@ height = 4.30663
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl3t7"]
 size = Vector2(13, 26)
 
-[node name="SwordSkeleton" type="CharacterBody2D"]
+[node name="SwordSkeleton" type="CharacterBody2D" groups=["enemies"]]
 y_sort_enabled = true
 collision_layer = 0
 collision_mask = 0

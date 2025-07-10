@@ -2,7 +2,7 @@ extends enemy
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var player := get_tree().get_first_node_in_group("player")
-@export var movement_speed: float = 200.0
+@export var movement_speed: = 350.0
 var attacking = false
 @onready var attack_range := 80
 
@@ -10,7 +10,7 @@ func _ready():
 	
 	super._ready()
 	add_to_group("bullets")
-	
+	add_to_group("enemies")
 	#Calculate the initial pathfinding
 	await get_tree().physics_frame
 	if player:
