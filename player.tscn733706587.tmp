@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://6u05j6pf16h2"]
+
+[ext_resource type="Texture2D" uid="uid://bb6aef3tedbs7" path="res://sprites/player/blue_bean_0001.png" id="1_hqtel"]
+[ext_resource type="Script" uid="uid://ixe2nj28ui41" path="res://player.gd" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bnfg4pk8daltr" path="res://sprites/player/blue_bean_0002.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://c2ufjssni4hvk" path="res://sprites/player/blue_bean_0003.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://xfvnn50fx6mg" path="res://sprites/player/blue_bean_0004.png" id="4_1jxqw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqtel"]
+radius = 4.0
+
+[node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_sweqy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.384, 0.384)
+sprite_frames = SubResource("SpriteFrames_dw050")
+animation = &"idle"
+offset = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_hqtel")
