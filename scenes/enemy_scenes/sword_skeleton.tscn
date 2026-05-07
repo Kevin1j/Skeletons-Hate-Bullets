@@ -168,7 +168,7 @@ radius = 2.00976
 height = 4.30663
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl3t7"]
-size = Vector2(13, 26)
+size = Vector2(18, 43)
 
 [node name="SwordSkeleton" type="CharacterBody2D" unique_id=320838328 groups=["enemies"]]
 y_sort_enabled = true
@@ -203,7 +203,7 @@ shape = SubResource("CapsuleShape2D_805g7")
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox" unique_id=1945487140]
-position = Vector2(8.5, -5)
+position = Vector2(6, -5.5)
 shape = SubResource("RectangleShape2D_fl3t7")
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

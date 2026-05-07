@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cjksomdkouem2"]
+
+[ext_resource type="Texture2D" uid="uid://c6bolda1j53un" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0001.png" id="1_hmlsr"]
+[ext_resource type="Texture2D" uid="uid://dqmvifnivi1l8" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0002.png" id="2_i8waw"]
+[ext_resource type="Texture2D" uid="uid://pm44vkqnkun3" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0003.png" id="3_utyvw"]
+[ext_resource type="Texture2D" uid="uid://w5ferkalwgb6" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0004.png" id="4_nuh3w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_01wpm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hmlsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i8waw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_utyvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nuh3w")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="TestSkele" type="CharacterBody2D" unique_id=65887806]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1899381738]
+sprite_frames = SubResource("SpriteFrames_01wpm")
+animation = &"walk"
+frame = 1
+frame_progress = 0.9545555

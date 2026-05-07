@@ -20,7 +20,11 @@ func die():
 		return
 	is_dead = true
 	$AnimatedSprite2D.play("die")
-	GlobalValues.score += 1
+	if not GlobalValues.dead:
+		increase_score()
 	await $AnimatedSprite2D.animation_finished
 	queue_free()
-	
+
+func increase_score():
+	push_error("Method 'increase_score' must be implemented in child class.")
+	#GlobalValues.score += 1

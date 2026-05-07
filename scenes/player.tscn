@@ -124,7 +124,6 @@ position = Vector2(-0.18, -0.077)
 shape = SubResource("RectangleShape2D_bwjto")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1786163980]
-position = Vector2(2, 0)
 zoom = Vector2(0.564, 0.564)
 limit_smoothed = true
 

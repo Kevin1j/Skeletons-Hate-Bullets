@@ -47,6 +47,7 @@ func _physics_process(_delta):
 		$HealthBar.visible = false
 	if current_health <= 0:
 		player_died.emit()
+		GlobalValues.dead = true
 		#Implement game over UI
 		#$GameOver.visible = true
 

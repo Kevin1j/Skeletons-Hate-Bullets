@@ -1,7 +1,7 @@
 extends enemy
 
 @export var movement_speed = 350.0
-@export var attack_range = 80
+@export var attack_range = 200
 @onready var navigation_agent = $NavigationAgent2D
 @onready var player = get_tree().get_first_node_in_group("player")
 var attacking = false
@@ -19,6 +19,10 @@ func _physics_process(_delta):
 		$HitBox.monitoring = false
 		$HitBox.monitorable = false
 		return  # Skip everything else
+	if attacking: #stop movement while attacking
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
 	# Regular enemy logic
 	if velocity.length() > 1.0:
 		if attacking == false:
@@ -42,6 +46,7 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
+	print("yep")
 	take_damage(area.damage)
 
 func attack(): #run the skeleton attack animation and logic
@@ -55,7 +60,7 @@ func attack(): #run the skeleton attack animation and logic
 
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.take_damage(10)
+		body.take_damage(50)
 	
 func increase_score():
-	GlobalValues.score += 1
+	GlobalValues.score += 5

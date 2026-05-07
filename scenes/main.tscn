@@ -4,9 +4,10 @@
 [ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scripts/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://6u05j6pf16h2" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dxw6vjf3lj0da" path="res://scenes/enemy_scenes/sword_skeleton.tscn" id="2_tbgi4"]
-[ext_resource type="Script" uid="uid://drh6n3qig0l87" path="res://scripts/enemy_scripts/enemy_spawner.gd" id="4_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/UI/restart_prompt.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/UI/score_counter.tscn" id="8_tipki"]
+[ext_resource type="Script" uid="uid://drh6n3qig0l87" path="res://scripts/enemy_spawner.gd" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://b86plcffyftqj" path="res://scenes/enemy_scenes/big_skeleton.tscn" id="5_tipki"]
+[ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/restart_prompt.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/score_counter.tscn" id="8_tipki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_sugp2")
@@ -122,6 +123,7 @@ visible = false
 position = Vector2(2328, -188)
 script = ExtResource("4_jyhfs")
 SwordSkeleton = ExtResource("2_tbgi4")
+BigSkeleton = ExtResource("5_tipki")
 
 [node name="player" parent="." unique_id=930596779 instance=ExtResource("2_jyhfs")]
 position = Vector2(2471, -478)
@@ -140,13 +142,11 @@ polygon = PackedVector2Array(313, 1698, 4268, 1693, 4281, -2484, 315, -2485, 313
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1089313957]
 layer = 10
 
-[node name="ScoreCounter" parent="CanvasLayer" unique_id=899732825 instance=ExtResource("8_tipki")]
+[node name="ScoreCount" parent="CanvasLayer" unique_id=899732825 instance=ExtResource("8_tipki")]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
 grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 

@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://b86plcffyftqj"]
+
+[ext_resource type="Script" uid="uid://d1jvt2gpg8l54" path="res://scripts/enemy_scripts/big_skeleton.gd" id="1_bg20q"]
+[ext_resource type="Texture2D" uid="uid://b7kngkeocdfle" path="res://sprites/enemies/big_skeleton/attack/big_skeleton_attack_0001.png" id="1_gcilb"]
+[ext_resource type="Texture2D" uid="uid://6x1aou8iiv6j" path="res://sprites/enemies/big_skeleton/attack/big_skeleton_attack_0002.png" id="2_bg20q"]
+[ext_resource type="Texture2D" uid="uid://dmp4y01l426gc" path="res://sprites/enemies/big_skeleton/attack/big_skeleton_attack_0003.png" id="3_8fkgi"]
+[ext_resource type="Texture2D" uid="uid://b6wdtegxyt866" path="res://sprites/enemies/big_skeleton/attack/big_skeleton_attack_0004.png" id="4_h8kiv"]
+[ext_resource type="Texture2D" uid="uid://bkolpytd388kh" path="res://sprites/enemies/big_skeleton/death/big_skeleton_death_0001.png" id="5_shuev"]
+[ext_resource type="Texture2D" uid="uid://ra2mckx3l73y" path="res://sprites/enemies/big_skeleton/death/big_skeleton_death_0002.png" id="6_8354i"]
+[ext_resource type="Texture2D" uid="uid://b5xuyxk17gja2" path="res://sprites/enemies/big_skeleton/death/big_skeleton_death_0003.png" id="7_nkasb"]
+[ext_resource type="Texture2D" uid="uid://d3kaislumsrcw" path="res://sprites/enemies/big_skeleton/death/big_skeleton_death_0004.png" id="8_wpyjx"]
+[ext_resource type="Texture2D" uid="uid://0hfshejxpjjn" path="res://sprites/enemies/big_skeleton/death/big_skeleton_death_0005.png" id="9_hkpg4"]
+[ext_resource type="Texture2D" uid="uid://c6bolda1j53un" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0001.png" id="10_srkl3"]
+[ext_resource type="Texture2D" uid="uid://dqmvifnivi1l8" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0002.png" id="11_ffeva"]
+[ext_resource type="Texture2D" uid="uid://pm44vkqnkun3" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0003.png" id="12_7bch8"]
+[ext_resource type="Texture2D" uid="uid://w5ferkalwgb6" path="res://sprites/enemies/big_skeleton/walk/big_skeleton_attack_0004.png" id="13_edgue"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43070"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gcilb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bg20q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8fkgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h8kiv")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_shuev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8354i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nkasb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wpyjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hkpg4")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_srkl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ffeva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7bch8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_edgue")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iposf"]
+size = Vector2(9, 27)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iipm7"]
+radius = 2.00976
+height = 4.30663
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qdr2"]
+size = Vector2(132, 105)
+
+[node name="BigSkeleton" type="CharacterBody2D" unique_id=2007879671 groups=["enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_bg20q")
+max_health = 300
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1730260414]
+sprite_frames = SubResource("SpriteFrames_43070")
+animation = &"attack"
+offset = Vector2(3.481, -4.002)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=834985339]
+target_desired_distance = 100.0
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1290220271]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=189130367]
+position = Vector2(-2.5, -3.5000005)
+shape = SubResource("RectangleShape2D_iposf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938048244]
+position = Vector2(-2.405, 6.948)
+scale = Vector2(1.38, 1.38)
+shape = SubResource("CapsuleShape2D_iipm7")
+
+[node name="SwordHitBox" type="Area2D" parent="." unique_id=1114577033]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox" unique_id=733760152]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_5qdr2")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="body_entered" from="SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]

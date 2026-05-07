@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://btpq2e5qg7mvt"]
+[gd_scene format=3 uid="uid://btpq2e5qg7mvt"]
 
 [ext_resource type="Script" uid="uid://bg58gmf46lfcs" path="res://scripts/score_counter.gd" id="1_v1o25"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=2082853973]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,8 +11,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v1o25")
 
-[node name="ScoreCounter" type="Label" parent="."]
+[node name="ScoreCounter" type="Label" parent="." unique_id=1257442293]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 32
 text = "Score: 0"

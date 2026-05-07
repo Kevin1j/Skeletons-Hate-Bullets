@@ -20,4 +20,5 @@ func _on_restart_button_pressed() -> void:
 	player_node.current_health = 100
 	player_node.position = Vector2(2471, -478)
 	GlobalValues.score = 0
+	GlobalValues.dead = false
 	visible = false
