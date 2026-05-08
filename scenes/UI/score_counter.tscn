@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btpq2e5qg7mvt"]
 
-[ext_resource type="Script" uid="uid://bg58gmf46lfcs" path="res://scripts/score_counter.gd" id="1_v1o25"]
+[ext_resource type="Script" uid="uid://bg58gmf46lfcs" path="res://scripts/UI/score_counter.gd" id="1_v1o25"]
 
 [node name="Control" type="Control" unique_id=899732825]
 layout_mode = 3

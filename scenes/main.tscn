@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scripts/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://6u05j6pf16h2" path="res://scenes/player.tscn" id="2_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://dxw6vjf3lj0da" path="res://scenes/enemy_scenes/sword_skeleton.tscn" id="2_tbgi4"]
-[ext_resource type="Script" uid="uid://drh6n3qig0l87" path="res://scripts/enemy_spawner.gd" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://b86plcffyftqj" path="res://scenes/enemy_scenes/big_skeleton.tscn" id="5_tipki"]
 [ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/restart_prompt.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/score_counter.tscn" id="8_tipki"]
@@ -94,6 +93,49 @@ texture = ExtResource("1_sugp2")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_h2yge")
 
+[sub_resource type="GDScript" id="GDScript_o6xl0"]
+script/source = "extends Node2D
+
+var interval = .25 #seconds between enemy spawn
+@export var SwordSkeleton: PackedScene 
+@export var BigSkeleton: PackedScene
+var spawnables
+
+
+func _ready():
+	randomize()
+	spawn_loop()
+	
+func spawn_loop():
+	var random_pos = 0
+	var spawn
+	while true:
+		await get_tree().create_timer(interval).timeout
+		var spawn_chance = randi_range(0,99)
+		if spawn_chance < 5: #5% change to spawn big skeleton
+			spawn = BigSkeleton
+		elif spawn_chance < 0:
+			pass #change to give other skeletons a change to spawn
+		else:
+			spawn = SwordSkeleton
+		random_pos = Vector2(
+			randf_range(318, 4275),
+			randf_range(-2484, 1702))
+		spawn_enemy(spawn, random_pos)
+
+func _process(_delta):
+	if Input.is_action_just_pressed(\"shoot\"):
+		print(\"Mouse at: \", get_global_mouse_position())
+
+func spawn_enemy(bad_guy, pos):
+	#var screen_size = get_viewport_rect().size
+	var skeleton = bad_guy.instantiate()
+	skeleton.position = pos  
+	skeleton.scale = Vector2(6.5,6.5)
+	get_tree().current_scene.add_child(skeleton)
+		
+"
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_h2yge"]
 vertices = PackedVector2Array(4266, 1689.99, 317.023, 1687, 326.969, -2480, 4266.99, -2482.99)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
@@ -121,7 +163,7 @@ tile_set = SubResource("TileSet_1bvp3")
 [node name="EnemySpawner" type="Node2D" parent="." unique_id=2041223503]
 visible = false
 position = Vector2(2328, -188)
-script = ExtResource("4_jyhfs")
+script = SubResource("GDScript_o6xl0")
 SwordSkeleton = ExtResource("2_tbgi4")
 BigSkeleton = ExtResource("5_tipki")
 

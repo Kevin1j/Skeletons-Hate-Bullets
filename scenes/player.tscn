@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6u05j6pf16h2"]
 
-[ext_resource type="Script" uid="uid://ixe2nj28ui41" path="res://scripts/player.gd" id="1_sweqy"]
+[ext_resource type="Script" uid="uid://ixe2nj28ui41" path="res://scripts/player/player.gd" id="1_sweqy"]
 [ext_resource type="Texture2D" uid="uid://cqx0h3nfpo3fw" path="res://sprites/player/blode_dude_0001.png" id="2_bwjto"]
 [ext_resource type="Texture2D" uid="uid://bdhvi5ni3yawl" path="res://sprites/player/blode_dude_0002.png" id="3_606se"]
 [ext_resource type="Texture2D" uid="uid://dw2k20qe172fl" path="res://sprites/player/blode_dude_0003.png" id="4_u1c27"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bmuyribhyete3" path="res://sprites/player/blode_dude_walking_0002.png" id="16_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://c8dauua0v76r4" path="res://sprites/player/blode_dude_walking_0003.png" id="17_5tmop"]
 [ext_resource type="Texture2D" uid="uid://bp0csjj7rai7j" path="res://sprites/player/blode_dude_walking_0004.png" id="18_7ahtn"]
-[ext_resource type="Script" uid="uid://dceyt0wya2eow" path="res://scripts/ak_47.gd" id="20_pbfsw"]
+[ext_resource type="Script" uid="uid://dceyt0wya2eow" path="res://scripts/player/ak_47.gd" id="20_pbfsw"]
 [ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/bullet_basic.tscn" id="21_5tmop"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
