@@ -46,21 +46,21 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _on_hit_box_area_entered(area: Area2D) -> void:
-	print("yep")
 	take_damage(area.damage)
 
 func attack(): #run the skeleton attack animation and logic
 	if attacking == false:
 		$AnimatedSprite2D.play("attack")
 	attacking = true
+	await get_tree().create_timer(0.4).timeout
 	$SwordHitBox.monitoring = true
-	await get_tree().create_timer(0.7).timeout
+	await get_tree().create_timer(0.7).timeoutw
 	$SwordHitBox.monitoring = false
 	attacking = false
 
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.take_damage(50)
+		body.take_damage(35)
 	
 func increase_score():
 	GlobalValues.score += 5
