@@ -54,7 +54,7 @@ func attack(): #run the skeleton attack animation and logic
 	attacking = true
 	await get_tree().create_timer(0.4).timeout
 	$SwordHitBox.monitoring = true
-	await get_tree().create_timer(0.7).timeoutw
+	await get_tree().create_timer(0.7).timeout
 	$SwordHitBox.monitoring = false
 	attacking = false
 
