@@ -6,7 +6,7 @@ var score_label
 func _ready():
 	visible = false
 	player_node.player_died.connect(_on_player_died)
-	score_label = $ColorRect/CenterContainer/VBoxContainer/Score
+	score_label = $Panel/VBoxContainer/Score
 	
 func _on_player_died() -> void:
 	visible = true
