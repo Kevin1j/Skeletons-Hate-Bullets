@@ -6,6 +6,7 @@ var attacking = false
 
 func _ready():
 	super._ready()
+	enemy_score = 5
 	#Calculate the initial pathfinding
 	navigation_agent.target_position = player.global_position
 
@@ -59,6 +60,3 @@ func attack(): #run the skeleton attack animation and logic
 func _on_sword_hit_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		body.take_damage(35)
-	
-func increase_score():
-	GlobalValues.score += 5

@@ -12,7 +12,7 @@ func _ready():
 	
 func _on_player_died() -> void:
 	visible = true
-	score_label.text = "Score: " + str(GlobalValues.score)
+	score_label.text = "Score: " + str(ScoreManager.score)
 
 func _on_restart_button_pressed() -> void:
 	for baddie in get_tree().get_nodes_in_group("enemies"):
@@ -20,6 +20,6 @@ func _on_restart_button_pressed() -> void:
 	
 	player_node.current_health = 100
 	player_node.position = Vector2(2471, -478)
-	GlobalValues.score = 0
+	ScoreManager.score = 0
 	GlobalValues.dead = false
 	visible = false
