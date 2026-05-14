@@ -5,15 +5,16 @@ var score_label
 
 func _ready():
 	visible = false
-	player_node.player_died.connect(_on_player_died)
 	score_label = $Panel/VBoxContainer/Score
+	
+	#Define Signals
+	player_node.player_died.connect(_on_player_died)
 	
 func _on_player_died() -> void:
 	visible = true
 	score_label.text = "Score: " + str(GlobalValues.score)
 
 func _on_restart_button_pressed() -> void:
-	print("yes")
 	for baddie in get_tree().get_nodes_in_group("enemies"):
 		baddie.queue_free()
 	

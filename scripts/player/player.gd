@@ -1,9 +1,7 @@
-extends CharacterBody2D
+extends Character
 
-signal player_died
-var current_health = 100
-@export var max_health = 100
 @export var speed = 400
+signal player_died
 
 func _ready():
 	current_health = max_health
@@ -19,7 +17,6 @@ func get_input():
 
 func _physics_process(_delta):
 	var mouse_pos = get_global_mouse_position()
-	
 	get_input()
 	move_and_slide()
 	if mouse_pos.x <= global_position.x:
@@ -35,7 +32,6 @@ func _physics_process(_delta):
 		$CollisionShape2D.position.x = 1.1
 		$CollisionShape2D.position.y = -0.077
 		
-		
 	if velocity.length() > 0:
 		$AnimatedSprite2D.play("walk")
 	else:
@@ -46,11 +42,12 @@ func _physics_process(_delta):
 	else: 
 		$HealthBar.visible = false
 	if current_health <= 0:
-		player_died.emit()
-		GlobalValues.dead = true
-		#Implement game over UI
-		#$GameOver.visible = true
+		die()
 
 func take_damage(amount):
 	current_health -= amount
 	$HealthBar.value = current_health
+
+func die():
+	player_died.emit()
+	GlobalValues.dead = true

@@ -86,6 +86,8 @@ size = Vector2(132, 105)
 collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_bg20q")
+attack_range = 200
+movement_speed = 350
 max_health = 300
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1730260414]

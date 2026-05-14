@@ -1,7 +1,5 @@
-extends enemy
+extends Enemy
 
-@export var movement_speed = 350.0
-@export var attack_range = 80
 @onready var navigation_agent = $NavigationAgent2D
 @onready var player = get_tree().get_first_node_in_group("player")
 var attacking = false
@@ -22,10 +20,10 @@ func _physics_process(_delta):
 	# Regular enemy logic
 	if velocity.length() > 1.0:
 		if attacking == false:
-			$AnimatedSprite2D.play("walk")
+			animated_sprite.play("walk")
 	else:
 		if attacking == false:
-			$AnimatedSprite2D.stop()
+			animated_sprite.stop()
 	navigation_agent.target_position = player.global_position
 	if global_position.distance_to(player.global_position) < attack_range:
 		velocity = Vector2.ZERO
@@ -37,7 +35,7 @@ func _physics_process(_delta):
 		velocity = direction * movement_speed
 		# Flip the sprite
 		if direction.x != 0:
-			$AnimatedSprite2D.scale.x = -1 if direction.x < 0 else 1
+			animated_sprite.scale.x = -1 if direction.x < 0 else 1
 			$SwordHitBox.scale.x = -1 if direction.x < 0 else 1
 	move_and_slide()
 
@@ -46,7 +44,7 @@ func _on_hit_box_area_entered(area: Area2D) -> void:
 
 func attack(): #run the skeleton attack animation and logic
 	if attacking == false:
-		$AnimatedSprite2D.play("attack")
+		animated_sprite.play("attack")
 	attacking = true
 	$SwordHitBox.monitoring = true
 	await get_tree().create_timer(0.7).timeout
