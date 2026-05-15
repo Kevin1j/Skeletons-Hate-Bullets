@@ -5,8 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dxw6vjf3lj0da" path="res://scenes/enemy_scenes/sword_skeleton.tscn" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b86plcffyftqj" path="res://scenes/enemy_scenes/big_skeleton.tscn" id="5_tipki"]
 [ext_resource type="PackedScene" uid="uid://go2imjljts10" path="res://scenes/player/player.tscn" id="6_tipki"]
-[ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/restart_prompt.tscn" id="7_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/score_counter.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/UI/restart_prompt.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://bespe8my10ovb" path="res://scenes/UI/gun_board.tscn" id="8_85g3d"]
+[ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/UI/score_counter.tscn" id="8_tipki"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_sugp2")
@@ -184,3 +185,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="RestartPrompt" parent="CanvasLayer" unique_id=122386631 node_paths=PackedStringArray("player_node") instance=ExtResource("7_o6xl0")]
 player_node = NodePath("../../player")
+
+[node name="GunBoard" parent="CanvasLayer" unique_id=585083045 instance=ExtResource("8_85g3d")]
+anchors_preset = 15

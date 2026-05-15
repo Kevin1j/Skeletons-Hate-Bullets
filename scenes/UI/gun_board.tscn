@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bespe8my10ovb"]
+
+[ext_resource type="Texture2D" uid="uid://cfw8kdl5m6go1" path="res://sprites/player/weapons/gun_board.png" id="1_6loy6"]
+[ext_resource type="Texture2D" uid="uid://0r3arx4chvxn" path="res://sprites/player/weapons/ak_47_0001.png" id="2_tsyv0"]
+[ext_resource type="Texture2D" uid="uid://csl6f0lvh17ip" path="res://sprites/player/weapons/ak_47_0002.png" id="3_hafcg"]
+[ext_resource type="Texture2D" uid="uid://gfsx6oibvibn" path="res://sprites/player/weapons/deagle_0001.png" id="4_qg7gu"]
+[ext_resource type="Texture2D" uid="uid://lwqd7fu54oas" path="res://sprites/player/weapons/deagle_0002.png" id="5_lixc6"]
+
+[node name="GunBoard" type="Control" unique_id=585083045]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1077540385]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -256.0
+offset_right = 512.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6loy6")
+
+[node name="ak_47" type="TextureButton" parent="TextureRect" unique_id=315154596]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -439.0
+offset_top = -292.0
+offset_right = -367.0
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.16, 5.16)
+texture_normal = ExtResource("2_tsyv0")
+texture_hover = ExtResource("3_hafcg")
+
+[node name="deagle" type="TextureButton" parent="TextureRect" unique_id=1817434059]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -529.0
+offset_top = -134.0
+offset_right = -464.99988
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.56, 4.56)
+texture_normal = ExtResource("4_qg7gu")
+texture_hover = ExtResource("5_lixc6")
+flip_h = true
