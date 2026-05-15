@@ -19,11 +19,12 @@ func _physics_process(_delta):
 func shoot():
 	var bullet = bullet_scene.instantiate()
 	bullet.damage = damage
+	bullet.pierce = pierce
 	bullet.position = $MuzzlePoint.global_position 
 	bullet.direction = (get_global_mouse_position() - player.global_position).normalized()
 	get_tree().current_scene.add_child(bullet)
 	cooldown = true #timer for how long between bullets
-	await get_tree().create_timer(1 - fire_rate/100).timeout
+	await get_tree().create_timer(1/fire_rate).timeout
 	cooldown = false #player can shoot again
 	
 func _process(_delta):

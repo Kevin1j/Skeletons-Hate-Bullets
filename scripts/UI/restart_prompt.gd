@@ -2,6 +2,7 @@ extends Control
 
 @export var player_node: Node2D
 var score_label
+signal round_over
 
 func _ready():
 	visible = false
@@ -23,3 +24,4 @@ func _on_restart_button_pressed() -> void:
 	ScoreManager.score = 0
 	GlobalValues.dead = false
 	visible = false
+	round_over.emit()

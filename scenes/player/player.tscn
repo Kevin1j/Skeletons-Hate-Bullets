@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://go2imjljts10"]
 
+[ext_resource type="Script" uid="uid://rcyo88ohlsws" path="res://scripts/player/player.gd" id="1_8ydkj"]
 [ext_resource type="Texture2D" uid="uid://cqx0h3nfpo3fw" path="res://sprites/player/blode_dude_0001.png" id="2_nirif"]
 [ext_resource type="Texture2D" uid="uid://bdhvi5ni3yawl" path="res://sprites/player/blode_dude_0002.png" id="3_s8ti4"]
 [ext_resource type="Texture2D" uid="uid://dw2k20qe172fl" path="res://sprites/player/blode_dude_0003.png" id="4_16kr7"]
@@ -19,61 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://3t51hbrjffvy" path="res://scenes/player/weapons/deagle.tscn" id="18_lgqa7"]
 [ext_resource type="Texture2D" uid="uid://bp0csjj7rai7j" path="res://sprites/player/blode_dude_walking_0004.png" id="18_x7sd6"]
 [ext_resource type="Script" uid="uid://0ebsvt1thl3r" path="res://scripts/player/player_health_bar.gd" id="21_hj5pe"]
-
-[sub_resource type="GDScript" id="GDScript_hj5pe"]
-script/source = "extends Character
-
-@export var speed = 400
-@onready var weapon = $AnimatedSprite2D.get_child(0)
-@onready var player_sprite = $AnimatedSprite2D
-signal player_died
-
-func _ready():
-	current_health = max_health
-
-func get_input():
-	var input_direction = Input.get_vector(\"left\", \"right\", \"up\", \"down\")
-	velocity = input_direction * speed
-	var direction_to_mouse = get_global_mouse_position() - global_position
-	if weapon.flip_h == true:
-		weapon.rotation = direction_to_mouse.angle()
-	else:
-		weapon.rotation = direction_to_mouse.angle() + PI
-
-func _physics_process(_delta):
-	var mouse_pos = get_global_mouse_position()
-	get_input()
-	move_and_slide()
-	if mouse_pos.x <= global_position.x:
-		player_sprite.flip_h = false
-		player_sprite.offset.x = 2
-		#change collision shape to match
-		$CollisionShape2D.position.x = -0.18
-		$CollisionShape2D.position.y = -0.077
-	elif mouse_pos.x >= global_position.x:
-		player_sprite.flip_h = true
-		player_sprite.offset.x = -2
-		
-		#change collision shape to match
-		$CollisionShape2D.position.x = 1.1
-		$CollisionShape2D.position.y = -0.077
-		
-	if velocity.length() > 0:
-		player_sprite.play(\"walk\")
-	else:
-		player_sprite.play(\"idle\")
-		
-
-	if current_health <= 0:
-		die()
-
-func take_damage(amount):
-	current_health -= amount
-
-func die():
-	player_died.emit()
-	GlobalValues.dead = true
-"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -151,7 +97,7 @@ bg_color = Color(1, 0, 0, 1)
 [node name="player" type="CharacterBody2D" unique_id=1938038777 groups=["player"]]
 y_sort_enabled = true
 scale = Vector2(5, 5)
-script = SubResource("GDScript_hj5pe")
+script = ExtResource("1_8ydkj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=520418253]
 y_sort_enabled = true
@@ -185,3 +131,5 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_a38lo")
 value = 100.0
 show_percentage = false
 script = ExtResource("21_hj5pe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1821314796]

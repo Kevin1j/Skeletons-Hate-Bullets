@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bespe8my10ovb"]
 
 [ext_resource type="Texture2D" uid="uid://cfw8kdl5m6go1" path="res://sprites/player/weapons/gun_board.png" id="1_6loy6"]
+[ext_resource type="Script" uid="uid://csn8i4j4euoba" path="res://scripts/UI/gun_board/gun_board.gd" id="1_lixc6"]
 [ext_resource type="Texture2D" uid="uid://0r3arx4chvxn" path="res://sprites/player/weapons/ak_47_0001.png" id="2_tsyv0"]
 [ext_resource type="Texture2D" uid="uid://csl6f0lvh17ip" path="res://sprites/player/weapons/ak_47_0002.png" id="3_hafcg"]
 [ext_resource type="Texture2D" uid="uid://gfsx6oibvibn" path="res://sprites/player/weapons/deagle_0001.png" id="4_qg7gu"]
@@ -8,14 +9,16 @@
 
 [node name="GunBoard" type="Control" unique_id=585083045]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lixc6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1077540385]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -35,15 +38,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -439.0
-offset_top = -292.0
-offset_right = -367.0
-offset_bottom = -228.0
+offset_left = -409.0
+offset_top = -173.0
+offset_right = -334.969
+offset_bottom = -152.45737
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(5.16, 5.16)
+toggle_mode = true
+action_mode = 0
 texture_normal = ExtResource("2_tsyv0")
+texture_pressed = ExtResource("3_hafcg")
 texture_hover = ExtResource("3_hafcg")
+stretch_mode = 3
 
 [node name="deagle" type="TextureButton" parent="TextureRect" unique_id=1817434059]
 layout_mode = 1
@@ -52,13 +59,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -529.0
-offset_top = -134.0
-offset_right = -464.99988
-offset_bottom = -70.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -412.0
+offset_top = -39.0
+offset_right = -385.9035
+offset_bottom = -22.114044
 scale = Vector2(4.56, 4.56)
+toggle_mode = true
+action_mode = 0
 texture_normal = ExtResource("4_qg7gu")
+texture_pressed = ExtResource("5_lixc6")
 texture_hover = ExtResource("5_lixc6")
+stretch_mode = 3
 flip_h = true
+
+[connection signal="pressed" from="TextureRect/ak_47" to="." method="_on_ak_47_pressed"]
+[connection signal="pressed" from="TextureRect/deagle" to="." method="_on_deagle_pressed"]

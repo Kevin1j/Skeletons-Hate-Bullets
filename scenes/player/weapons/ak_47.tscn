@@ -7,10 +7,13 @@
 [node name="Ak47" type="Sprite2D" unique_id=1182791719]
 z_index = 1
 y_sort_enabled = true
+position = Vector2(-5, -5)
 scale = Vector2(0.32812497, 0.32812497)
 texture = ExtResource("1_mb4bs")
 script = ExtResource("2_5niar")
 bullet_scene = ExtResource("3_dujyk")
+fire_rate = 10.0
+damage = 50.0
 
 [node name="MuzzlePoint" type="Marker2D" parent="." unique_id=1665637786]
 position = Vector2(-35, -4.5)

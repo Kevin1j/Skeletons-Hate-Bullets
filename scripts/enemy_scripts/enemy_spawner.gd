@@ -1,33 +1,48 @@
 extends Node2D
 
-var interval = .25 #seconds between enemy spawn
+var interval = 1 #seconds between enemy spawn
+@export var player: Character
+@export var restart: Control
 @export var SwordSkeleton: PackedScene 
 @export var BigSkeleton: PackedScene
+@export var spawn_circle: float = 2000
+var round_time: float = 0.0
 var spawnables
 
 
-func _ready():
-	randomize()
+func _ready():	
 	spawn_loop()
+	restart.round_over.connect(end_round)
+	
+func end_round():
+	round_time = 0.0
 	
 func spawn_loop():
-	var random_pos = 0
-	var spawn
+	var random_pos = Vector2.ZERO
+	var spawn #holds the enemy that spawns
 	while true:
 		await get_tree().create_timer(interval).timeout
+		interval = 1 - round_time/200
 		var spawn_chance = randi_range(0,99)
-		if spawn_chance < 5: #5% change to spawn big skeleton
+		if spawn_chance < 5 + 10/(1000-round_time): #5% change to spawn big skeleton
 			spawn = BigSkeleton
 		elif spawn_chance < 0:
 			pass #change to give other skeletons a change to spawn
 		else:
 			spawn = SwordSkeleton
-		random_pos = Vector2(
-			randf_range(318, 4275),
-			randf_range(-2484, 1702))
-		spawn_enemy(spawn, random_pos)
+		var is_valid_pos = false
+		var attempts = 0 #prevent an infinite while loop
+		while attempts < 100:
+			random_pos = Vector2(randf_range(318, 4275), randf_range(-2484, 1702))
+			var distance = random_pos.distance_to(player.global_position)
+			if distance > spawn_circle:
+				is_valid_pos = true
+			attempts += 1
+		if is_valid_pos:
+			spawn_enemy(spawn, random_pos)
 
 func _process(_delta):
+	round_time += _delta
 	if Input.is_action_just_pressed("shoot"):
 		print("Mouse at: ", get_global_mouse_position())
 

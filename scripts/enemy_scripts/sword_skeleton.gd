@@ -40,9 +40,6 @@ func _physics_process(_delta):
 			$SwordHitBox.scale.x = -1 if direction.x < 0 else 1
 	move_and_slide()
 
-func _on_hit_box_area_entered(area: Area2D) -> void:
-	take_damage(area.damage)
-
 func attack(): #run the skeleton attack animation and logic
 	if attacking == false:
 		animated_sprite.play("attack")
