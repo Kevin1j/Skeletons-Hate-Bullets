@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://3t51hbrjffvy"]
+
+[ext_resource type="Texture2D" uid="uid://b8rk8cn1n0b8o" path="res://sprites/player/weapons/deagle.png" id="1_i6lpt"]
+[ext_resource type="Script" uid="uid://c7n553dijlr8p" path="res://scripts/player/weapons/deagle.gd" id="2_dqqw0"]
+[ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/player/weapons/bullet_basic.tscn" id="3_x76g2"]
+
+[node name="Deagle" type="Sprite2D" unique_id=1182791719]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-5, -5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_i6lpt")
+script = ExtResource("2_dqqw0")
+bullet_scene = ExtResource("3_x76g2")
+fire_rate = 2.0
+pierce = 1
+
+[node name="MuzzlePoint" type="Marker2D" parent="." unique_id=1665637786]
+position = Vector2(-12.05, -5.075)

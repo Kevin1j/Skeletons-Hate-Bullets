@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhefkxetl40nd"]
+[gd_scene format=3 uid="uid://bhefkxetl40nd"]
 
-[ext_resource type="Texture2D" uid="uid://bkkwcoq10jjow" path="res://sprites/weapons/BasicBase.png" id="1_7igtk"]
+[ext_resource type="Texture2D" uid="uid://bkkwcoq10jjow" path="res://sprites/player/weapons/BasicBase.png" id="1_7igtk"]
 [ext_resource type="Script" uid="uid://dttm8m6oikdv5" path="res://scripts/machine_gun_turret.gd" id="1_iehel"]
-[ext_resource type="Texture2D" uid="uid://bv0djwrft6wi8" path="res://sprites/weapons/MG_W.png" id="2_jj3lf"]
-[ext_resource type="Texture2D" uid="uid://cb8rfmiitqft6" path="res://sprites/weapons/MG_E.png" id="3_1whnv"]
-[ext_resource type="Texture2D" uid="uid://c4wxmvs0ea4ux" path="res://sprites/weapons/MG_N.png" id="3_rgc3u"]
-[ext_resource type="Texture2D" uid="uid://dfgji45i6ndw5" path="res://sprites/weapons/MG_S.png" id="4_c4kot"]
+[ext_resource type="Texture2D" uid="uid://bv0djwrft6wi8" path="res://sprites/player/weapons/MG_W.png" id="2_jj3lf"]
+[ext_resource type="Texture2D" uid="uid://cb8rfmiitqft6" path="res://sprites/player/weapons/MG_E.png" id="3_1whnv"]
+[ext_resource type="Texture2D" uid="uid://c4wxmvs0ea4ux" path="res://sprites/player/weapons/MG_N.png" id="3_rgc3u"]
+[ext_resource type="Texture2D" uid="uid://dfgji45i6ndw5" path="res://sprites/player/weapons/MG_S.png" id="4_c4kot"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7igtk"]
 height = 34.0

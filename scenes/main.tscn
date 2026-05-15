@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scripts/main.gd" id="1_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://dxw6vjf3lj0da" path="res://scenes/enemy_scenes/sword_skeleton.tscn" id="2_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b86plcffyftqj" path="res://scenes/enemy_scenes/big_skeleton.tscn" id="5_tipki"]
-[ext_resource type="PackedScene" uid="uid://go2imjljts10" path="res://scenes/new_player_beta/player_new.tscn" id="6_tipki"]
+[ext_resource type="PackedScene" uid="uid://go2imjljts10" path="res://scenes/player/player.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/restart_prompt.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/score_counter.tscn" id="8_tipki"]
 
@@ -161,7 +161,6 @@ tile_map_data = PackedByteArray("AAACABEAAAADAAAAAAADABIAAAADAAAAAAAGABMAAAADAAA
 tile_set = SubResource("TileSet_1bvp3")
 
 [node name="EnemySpawner" type="Node2D" parent="." unique_id=2041223503]
-visible = false
 position = Vector2(2328, -188)
 script = SubResource("GDScript_o6xl0")
 SwordSkeleton = ExtResource("2_tbgi4")
@@ -171,14 +170,11 @@ BigSkeleton = ExtResource("5_tipki")
 position = Vector2(2493, -392)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=863147965]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_h2yge")
 
 [node name="MapBounds" type="StaticBody2D" parent="." unique_id=1768199481]
-visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapBounds" unique_id=1029778658]
-visible = false
 polygon = PackedVector2Array(313, 1698, 4268, 1693, 4281, -2484, 315, -2485, 313, 1697, 311, 1697, 298, -2521, 4311, -2512, 4296, 1721, 313, 1699)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1944493254]

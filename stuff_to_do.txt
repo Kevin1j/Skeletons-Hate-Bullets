@@ -1,0 +1,10 @@
+1. Weapon class - any weapon can be swapped onto the player when it is abstracted. 
+	Desert Eagle is implemented
+
+2. New background for the tile map(dungeon) - menu screen
+
+3. A "home area" where you can walk around, and start the round by entering the dungeon or arena or whatever. 
+
+4. Pile of bones that grows as you collect bones from skeletons
+
+5. Skeleton with rocks / bow

@@ -1,0 +1,12 @@
+res://scenes/enemy_scenes/big_skeleton.tscn::60eb090376b6a9d1f5a932a47b12172e::1778558643::res://.godot/exported/133200997/export-fafa2d41541e3143d6f4eb6aa6640900-big_skeleton.scn
+res://scenes/enemy_scenes/sword_skeleton.tscn::eae3206dc6e550a17ab7e8bee1b15810::1778204466::res://.godot/exported/133200997/export-ee3cdadb0b0c698d39e7f8731210ee86-sword_skeleton.scn
+res://scenes/enemy_scenes/test_skele.tscn::f1ea1fdd27774260abf41bd5997201c6::1778204466::res://.godot/exported/133200997/export-b307980f73009e56ef25b90984131880-test_skele.scn
+res://scenes/UI/restart_prompt.tscn::285dc32b251614b696aeafdee47fceaf::1778204551::res://.godot/exported/133200997/export-d52a2bfeda812176931a509c1049362e-restart_prompt.scn
+res://scenes/UI/score_counter.tscn::25880862ca43be185be167b3edf67999::1778204551::res://.godot/exported/133200997/export-c9a4f92c74d0d8a1b39e986f8777c32d-score_counter.scn
+res://scenes/bullet_basic.tscn::3a4a70df6985de91e509c2100d2f749f::1778204569::res://.godot/exported/133200997/export-41e99452000eda0226e797f4282329f1-bullet_basic.scn
+res://scenes/machine_gun_turret.tscn::8abe20b35677f0435a11ec72fc7a2285::1778204466::res://.godot/exported/133200997/export-848d2e69e0c07c174b68b38ab3b79986-machine_gun_turret.scn
+res://scenes/main.tscn::81fe5556fa28eac30cdc1467cad2842a::1778605568::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/player.tscn::fa13df27cab37d560f369a2416c4d037::1778204569::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/restart_prompt.tscn::91250e51535db85ff39b5048e7a24b14::1778606210::res://.godot/exported/133200997/export-45df68ae566f44c3af72fb4cc38fc615-restart_prompt.scn
+res://scenes/score_counter.tscn::5f06aedbd9538d4c0f7898542a37fde8::1778604694::res://.godot/exported/133200997/export-27279e01f331d95b691edbe708c9847a-score_counter.scn
+res://scenes/skeleton.tscn::d728ce4b386d55f81ee0ee7d6d122fc7::1778204466::res://.godot/exported/133200997/export-386574a3415713060101efec962c7b64-skeleton.scn
