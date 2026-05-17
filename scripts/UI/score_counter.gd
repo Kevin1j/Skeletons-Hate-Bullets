@@ -1,4 +1,5 @@
-extends Control
+extends CanvasLayer
 
 func _physics_process(_delta):
-	$ScoreCounter.text = "Score: " + str(ScoreManager.score)
+	$Control/VBoxContainer/ScoreCounter.text = "Score: " + str(ScoreManager.score)
+	$Control/VBoxContainer/Timer.text = "Round Time: %.2f" % ScoreManager.time

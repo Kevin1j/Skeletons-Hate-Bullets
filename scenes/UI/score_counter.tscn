@@ -1,22 +1,56 @@
 [gd_scene format=3 uid="uid://btpq2e5qg7mvt"]
 
 [ext_resource type="Script" uid="uid://bg58gmf46lfcs" path="res://scripts/UI/score_counter.gd" id="1_v1o25"]
+[ext_resource type="FontFile" uid="uid://g1xxi88ajdo7" path="res://sprites/VCR_OSD_MONO_1.001.ttf" id="2_58uma"]
 
-[node name="Control" type="Control" unique_id=899732825]
+[sub_resource type="FontVariation" id="FontVariation_58uma"]
+base_font = ExtResource("2_58uma")
+variation_transform = Transform2D(1, 0, 0.005, 1, 0, 0)
+
+[sub_resource type="Theme" id="Theme_58uma"]
+Label/fonts/font = SubResource("FontVariation_58uma")
+
+[node name="Control" type="CanvasLayer" unique_id=2120624639]
+script = ExtResource("1_v1o25")
+
+[node name="Control" type="Control" parent="." unique_id=142173558]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1920.0
-offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_v1o25")
+theme = SubResource("Theme_58uma")
 
-[node name="ScoreCounter" type="Label" parent="." unique_id=1057043307]
-layout_mode = 0
-offset_right = 113.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 60
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1246487313]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -151.0
+offset_top = 50.0
+offset_right = 151.0
+offset_bottom = 183.0
+grow_horizontal = 2
+
+[node name="Timer" type="Label" parent="Control/VBoxContainer" unique_id=493611585]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Round Time: 0.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreCounter" type="Label" parent="Control/VBoxContainer" unique_id=1057043307]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
 text = "Score: 0"
 horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BoneCounter" type="Label" parent="Control/VBoxContainer" unique_id=734110818]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Bones: 0"
+horizontal_alignment = 1
+vertical_alignment = 1

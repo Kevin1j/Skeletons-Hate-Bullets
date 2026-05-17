@@ -20,7 +20,7 @@ func _on_restart_button_pressed() -> void:
 		baddie.queue_free()
 	
 	player_node.current_health = 100
-	player_node.position = Vector2(2471, -478)
+	player_node.position = Vector2(4000, 4000)
 	ScoreManager.score = 0
 	GlobalValues.dead = false
 	visible = false
