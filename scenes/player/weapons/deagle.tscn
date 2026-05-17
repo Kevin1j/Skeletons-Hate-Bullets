@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/player/weapons/bullet_basic.tscn" id="3_x76g2"]
 
 [node name="Deagle" type="Sprite2D" unique_id=1182791719]
-z_index = 1
-y_sort_enabled = true
 position = Vector2(-5, -5)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_i6lpt")

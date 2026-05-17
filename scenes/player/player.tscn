@@ -100,13 +100,14 @@ scale = Vector2(5, 5)
 script = ExtResource("1_8ydkj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=520418253]
-y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_dw050")
 animation = &"walk"
 speed_scale = 2.039
 offset = Vector2(2, -11.5)
 
 [node name="Deagle" parent="AnimatedSprite2D" unique_id=1182791719 instance=ExtResource("18_lgqa7")]
+z_index = 0
+y_sort_enabled = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=765287732]
 position = Vector2(0, -2.9802322e-08)

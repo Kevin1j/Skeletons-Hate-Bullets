@@ -5,8 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/player/weapons/bullet_basic.tscn" id="3_dujyk"]
 
 [node name="Ak47" type="Sprite2D" unique_id=1182791719]
-z_index = 1
-y_sort_enabled = true
 position = Vector2(-5, -5)
 scale = Vector2(0.32812497, 0.32812497)
 texture = ExtResource("1_mb4bs")
