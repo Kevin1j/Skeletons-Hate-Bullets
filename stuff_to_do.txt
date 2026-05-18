@@ -1,10 +1,22 @@
-1. Weapon class - any weapon can be swapped onto the player when it is abstracted. 
-	Desert Eagle is implemented
+v0.1.0: 
+	1. Bones drop from enemies and can be collected by player. Bones from found persist round to round. 
+	2. Gun shop merchant enables the gun board which has locked guns that can be purchased with bones. 
+	3. Castle should have boundaries that cannot be crossed by the player. 
+	4. There should be a highscore feature that persisits round to round. 
 
-2. New background for the tile map(dungeon) - menu screen
+v0.1.1: Guns
+	1. Skeletons drop health, some sort of ability. 
+	2. Witch NPC that can deposit bones into a cauldron to level up the amount of bones recieved form enemies
+	3. P290 implemented into the gun board as a playable weapon
+	4. Glock-19 implemented into the gun baord as a playable weapon
+	5. AWP implemented into the gunboard as a playable weapon
+	6. All weapons should still be purchaseable at higher and higher prices with a "defined" order
 
-3. A "home area" where you can walk around, and start the round by entering the dungeon or arena or whatever. 
+v0.1.2: Skeletons
+	1. Skeleton that throws bones should be implemented
+	2. Skeleton with a bow should be implemented
+	3. Runner skeleton should be implemented (fast and weak)
+	4. Better spawn logic: Game should get harder as round progresses, enemies spawn perhaps in groups. 
 
-4. Pile of bones that grows as you collect bones from skeletons
-
-5. Skeleton with rocks / bow
+v0.1.3: Money
+	1. Another currency implemented into the game that is harder to get than bones and worth more. 
