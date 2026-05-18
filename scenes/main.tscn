@@ -535,6 +535,7 @@ position = Vector2(4320.0005, 4117)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1944493254]
 
 [node name="ScoreCounter" parent="CanvasLayer" unique_id=2120624639 instance=ExtResource("8_tipki")]
+layer = 0
 
 [node name="RestartPrompt" parent="CanvasLayer" unique_id=122386631 node_paths=PackedStringArray("player_node") instance=ExtResource("7_o6xl0")]
 player_node = NodePath("../../player")

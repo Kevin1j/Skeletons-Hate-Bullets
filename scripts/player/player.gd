@@ -63,9 +63,9 @@ func die():
 	GlobalValues.dead = true
 
 func toggle_gun_board():
-	print("Button pressed! Spawning UI...")
 	if active_gun_board == null:
 		active_gun_board = gun_board.instantiate()
+		active_gun_board.z_index = 2
 		ui_layer.add_child(active_gun_board)
 		active_gun_board.player_gun.connect(equip_weapon)
 	else:
