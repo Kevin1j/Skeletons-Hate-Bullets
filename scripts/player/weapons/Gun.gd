@@ -6,6 +6,7 @@ class_name Gun
 @export var damage: float = 200
 @export var pierce: int = 0
 @onready var muzzle_point = $MuzzlePoint
+@onready var player_sprite = get_parent()
 @onready var player: Node2D = $"."
 var is_shooting: bool = false
 var cooldown: bool = false
@@ -30,11 +31,11 @@ func shoot():
 func _process(_delta):
 	#logic for the movement of the gun following the mouse
 	var mouse_pos = get_global_mouse_position()
-	if mouse_pos.x <= global_position.x:
+	if mouse_pos.x <= player_sprite.global_position.x:
 		flip_h = false
 		position.x = -4.5
 		muzzle_point.position.x = muzzle_x_location
-	elif mouse_pos.x >= global_position.x:
+	elif mouse_pos.x >= player_sprite.global_position.x:
 		flip_h = true
 		position.x = 4.5
 		muzzle_point.position.x = muzzle_x_location * -1

@@ -6,7 +6,6 @@ var attacking = false
 
 func _ready():
 	super._ready()
-	enemy_score = 1
 	#Calculate the initial pathfinding
 	navigation_agent.target_position = player.global_position
 
@@ -15,7 +14,6 @@ func _physics_process(_delta):
 		# Stop all movement, but DO NOT override animation
 		velocity = Vector2.ZERO
 		move_and_slide()
-		$HitBox.monitoring = false
 		$HitBox.monitorable = false
 		return  # Skip everything else
 	# Regular enemy logic

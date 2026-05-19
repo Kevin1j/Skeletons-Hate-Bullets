@@ -18,3 +18,6 @@ func take_damage(amount):
 		die()
 func die():
 	pass
+
+func reset_health():
+	current_health = max_health

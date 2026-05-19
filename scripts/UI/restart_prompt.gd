@@ -19,9 +19,12 @@ func _on_restart_button_pressed() -> void:
 	for baddie in get_tree().get_nodes_in_group("enemies"):
 		baddie.queue_free()
 	
+	await get_tree().process_frame
 	player_node.current_health = 100
 	player_node.position = Vector2(4000, 4000)
 	ScoreManager.score = 0
 	GlobalValues.dead = false
 	visible = false
 	round_over.emit()
+	player_node.alive = true
+	player_node.reset_health()

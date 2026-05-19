@@ -4,6 +4,7 @@ extends Character
 @onready var weapon = $AnimatedSprite2D.get_child(0)
 @onready var player_sprite = $AnimatedSprite2D
 @onready var ui_layer = $CanvasLayer
+var alive = true
 signal player_died
 
 var gun_board = preload("res://scenes/UI/gun_board.tscn")
@@ -59,6 +60,7 @@ func take_damage(amount):
 	current_health -= amount
 
 func die():
+	alive = false
 	player_died.emit()
 	GlobalValues.dead = true
 
