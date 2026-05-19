@@ -1,6 +1,5 @@
 extends Character
 
-@export var speed = 400
 @onready var weapon = $AnimatedSprite2D.get_child(0)
 @onready var player_sprite = $AnimatedSprite2D
 @onready var ui_layer = $CanvasLayer
@@ -9,10 +8,12 @@ signal player_died
 
 var gun_board = preload("res://scenes/UI/gun_board.tscn")
 var active_gun_board = null
+signal gun_board_toggled
 
 var weapon_dict = {
 	"ak_47": preload("res://scenes/player/weapons/ak_47.tscn"),
-	"deagle": preload("res://scenes/player/weapons/deagle.tscn")
+	"deagle": preload("res://scenes/player/weapons/deagle.tscn"),
+	"ump_45": preload("res://scenes/player/weapons/ump_45.tscn")
 }
 
 func _ready():
@@ -20,7 +21,7 @@ func _ready():
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * speed
+	velocity = input_direction * movement_speed
 	var direction_to_mouse = get_global_mouse_position() - global_position
 	if weapon.flip_h == true:
 		weapon.rotation = direction_to_mouse.angle()
@@ -65,6 +66,7 @@ func die():
 	GlobalValues.dead = true
 
 func toggle_gun_board():
+	gun_board_toggled.emit()
 	if active_gun_board == null:
 		active_gun_board = gun_board.instantiate()
 		active_gun_board.z_index = 2

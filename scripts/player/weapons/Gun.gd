@@ -11,10 +11,15 @@ class_name Gun
 var is_shooting: bool = false
 var cooldown: bool = false
 var muzzle_x_location : int
+var gun_board_open = false
+
+func _ready():
+	player.gun_board_toggled.connect(_on_gun_board_toggled)
+	pass
 
 func _physics_process(_delta):
 	is_shooting = Input.is_action_pressed("shoot")
-	if is_shooting && not cooldown:
+	if is_shooting && not cooldown && not gun_board_open:
 		shoot()
 
 func shoot():
@@ -39,3 +44,8 @@ func _process(_delta):
 		flip_h = true
 		position.x = 4.5
 		muzzle_point.position.x = muzzle_x_location * -1
+func _on_gun_board_toggled():
+	if gun_board_open == true:
+		gun_board_open = false
+	else:
+		gun_board_open = true

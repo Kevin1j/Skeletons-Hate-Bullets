@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://go2imjljts10" path="res://scenes/player/player.tscn" id="6_tipki"]
 [ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/UI/restart_prompt.tscn" id="7_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://btpq2e5qg7mvt" path="res://scenes/UI/score_counter.tscn" id="8_tipki"]
+[ext_resource type="PackedScene" uid="uid://80gq8mrdp1p1" path="res://scenes/environment/stand.tscn" id="10_trceg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eb6dy"]
 texture = ExtResource("2_85g3d")
@@ -390,31 +391,42 @@ texture = ExtResource("2_85g3d")
 2:0/0 = 0
 3:0/0 = 0
 3:0/0/y_sort_origin = 7
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 4:0/0 = 0
 4:0/0/y_sort_origin = 7
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 5:0/0 = 0
 5:0/0/y_sort_origin = 7
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 6:0/0 = 0
 6:0/0/y_sort_origin = 7
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 7:0/0 = 0
 7:0/0/y_sort_origin = 7
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 0:1/0 = 0
 0:1/0/y_sort_origin = 7
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 1:1/0 = 0
 1:1/0/y_sort_origin = 7
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 2:1/0 = 0
 2:1/0/y_sort_origin = 7
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 3:1/0 = 0
 3:1/0/y_sort_origin = 7
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 4:1/0 = 0
 4:1/0/y_sort_origin = 7
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 5:1/0 = 0
 5:1/0/y_sort_origin = 7
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 6:1/0 = 0
 6:1/0/y_sort_origin = 20
 7:1/0 = 0
 7:1/0/y_sort_origin = 7
-7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5971746, 4.856186, 3.2374573, 5.036045, 3.956892, 8, -3.7770338, 8)
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -443,15 +455,25 @@ texture = ExtResource("2_85g3d")
 0:7/0 = 0
 1:7/0 = 0
 7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.2374573, -8, 8, -8, 8, 8, 2.877739, 8)
 7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -2.877739, -8, -2.6978817, 8, -8, 8)
 7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 4.3166103, 4.136751, 4.4964676, -8, 8, -8, 8, 4.136751, 8, 8, -8, 8)
 7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, -8, -8, -4.856186, -8, -4.6763268, 4.136751, 8, 4.136751, 8, 8, -8, 8)
 7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 4.3166103, 4.136751, 4.4964676, -8, 8, -8, 8, 4.136751, 8, 8, -8, 8)
 6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, -8, -8, -4.856186, -8, -4.6763268, 4.136751, 8, 4.136751, 8, 8, -8, 8)
 5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 4.3166103, 4.136751, 4.4964676, -8, 8, -8, 8, 4.136751, 8, 8, -8, 8)
 4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, -8, -8, -4.856186, -8, -4.6763268, 4.136751, 8, 4.136751, 8, 8, -8, 8)
 5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 3.956892, 8, 4.136751, 8, 8, -8, 8)
 3:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_choun"]
@@ -528,6 +550,10 @@ navigation_polygon = SubResource("NavigationPolygon_h2yge")
 position = Vector2(215.82497, 169.05156)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_jkv2x")
+
+[node name="Stand" parent="world_main" unique_id=247839257 instance=ExtResource("10_trceg")]
+position = Vector2(260.99997, 192.84999)
+scale = Vector2(0.355, 0.355)
 
 [node name="player" parent="." unique_id=1938038777 instance=ExtResource("6_tipki")]
 position = Vector2(4320.0005, 4117)

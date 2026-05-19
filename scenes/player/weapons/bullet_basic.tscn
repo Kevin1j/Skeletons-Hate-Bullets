@@ -10,7 +10,7 @@ radius = 2.04551
 y_sort_enabled = true
 scale = Vector2(3.567, 3.567)
 collision_layer = 2
-collision_mask = 6
+collision_mask = 4
 script = ExtResource("1_4x6ae")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=151506243]

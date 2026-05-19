@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://80gq8mrdp1p1"]
+
+[ext_resource type="Texture2D" uid="uid://db2nuyfwownjc" path="res://sprites/env_tiles/stand.png" id="1_lhkcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnw1r"]
+size = Vector2(36, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70emg"]
+size = Vector2(36, 6)
+
+[node name="Stand" type="Node2D" unique_id=247839257]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075541699]
+texture = ExtResource("1_lhkcd")
+
+[node name="ActivateArea" type="Area2D" parent="." unique_id=671380518]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActivateArea" unique_id=1750590072]
+position = Vector2(2, 15.5)
+shape = SubResource("RectangleShape2D_lnw1r")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1124486438]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=444374275]
+position = Vector2(2, 9)
+shape = SubResource("RectangleShape2D_70emg")
