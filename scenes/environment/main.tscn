@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://4bhidvvwu12w"]
 
-[ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://88c2eiljh3nr" path="res://scripts/environment/main.gd" id="1_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://d1yuguh85ybun" path="res://sprites/env_tiles/castle.png" id="2_85g3d"]
 [ext_resource type="Script" uid="uid://ck4gkog6w2nbd" path="res://scripts/UI/world_main.gd" id="2_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://bb4xmnerl4xh6" path="res://sprites/env_tiles/grass.png" id="2_eb6dy"]
