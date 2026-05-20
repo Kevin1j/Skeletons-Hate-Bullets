@@ -5,9 +5,11 @@ extends Area2D
 var direction := Vector2.ZERO
 var pierce = 0
 var _enemies_pierced = 0
+var player_velocity: Vector2 = Vector2.ZERO
 
 func _process(delta):
-	position += direction * speed * delta
+	position += direction * speed * delta #normal ass stuff
+	#position += (direction * speed + player_velocity).normalized() * speed * delta #crazy shit where every movement effects bullet movement (implement on one gun as a feature)
 
 func _ready():
 	pass

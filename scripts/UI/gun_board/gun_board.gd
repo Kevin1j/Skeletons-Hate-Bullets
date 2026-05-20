@@ -6,7 +6,7 @@ extends Node
 var gun_selected = ak_47
 var guns = []
 
-signal player_gun(gun: String)
+signal equip_weapon(gun:String)
 
 func _ready():
 	guns.append(ak_47)
@@ -15,7 +15,7 @@ func _ready():
 
 func _on_ak_47_pressed() -> void:
 	gun_selected = ak_47
-	player_gun.emit("ak_47")
+	equip_weapon.emit("ak_47")
 	for gun in guns:
 		if gun == ak_47:
 			gun.button_pressed = true
@@ -24,7 +24,7 @@ func _on_ak_47_pressed() -> void:
 
 func _on_deagle_pressed() -> void:
 	gun_selected = deagle
-	player_gun.emit("deagle")
+	equip_weapon.emit("deagle")
 	for gun in guns:
 		if gun == deagle:
 			gun.button_pressed = true
@@ -33,7 +33,7 @@ func _on_deagle_pressed() -> void:
 
 func _on_ump_45_pressed() -> void:
 	gun_selected = ump_45
-	player_gun.emit("ump_45")
+	equip_weapon.emit("ump_45")
 	for gun in guns:
 		if gun == ump_45:
 			gun.button_pressed = true

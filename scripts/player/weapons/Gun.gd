@@ -5,9 +5,10 @@ class_name Gun
 @export var fire_rate: float = 1
 @export var damage: float = 200
 @export var pierce: int = 0
+@export var gun_position: float = 0
 @onready var muzzle_point = $MuzzlePoint
 @onready var player_sprite = get_parent()
-@onready var player: Node2D = $"."
+@onready var player: Node2D = $".".get_parent().get_parent()
 var is_shooting: bool = false
 var cooldown: bool = false
 var muzzle_x_location : int
@@ -24,6 +25,7 @@ func _physics_process(_delta):
 
 func shoot():
 	var bullet = bullet_scene.instantiate()
+	bullet.player_velocity = player.velocity
 	bullet.damage = damage
 	bullet.pierce = pierce
 	bullet.position = $MuzzlePoint.global_position 
@@ -38,11 +40,11 @@ func _process(_delta):
 	var mouse_pos = get_global_mouse_position()
 	if mouse_pos.x <= player_sprite.global_position.x:
 		flip_h = false
-		position.x = -4.5
+		position.x = -gun_position
 		muzzle_point.position.x = muzzle_x_location
 	elif mouse_pos.x >= player_sprite.global_position.x:
 		flip_h = true
-		position.x = 4.5
+		position.x = gun_position
 		muzzle_point.position.x = muzzle_x_location * -1
 func _on_gun_board_toggled():
 	if gun_board_open == true:

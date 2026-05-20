@@ -6,10 +6,6 @@ extends Character
 var alive = true
 signal player_died
 
-var gun_board = preload("res://scenes/UI/gun_board.tscn")
-var active_gun_board = null
-signal gun_board_toggled
-
 var weapon_dict = {
 	"ak_47": preload("res://scenes/player/weapons/ak_47.tscn"),
 	"deagle": preload("res://scenes/player/weapons/deagle.tscn"),
@@ -18,6 +14,7 @@ var weapon_dict = {
 
 func _ready():
 	current_health = max_health
+	
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -47,10 +44,9 @@ func _process(_delta):
 		player_sprite.play("walk")
 	else:
 		player_sprite.play("idle")
-	if Input.is_action_just_pressed("gun_selection"):
-		toggle_gun_board()
+
 func _physics_process(_delta):
-	var mouse_pos = get_global_mouse_position()
+	#var mouse_pos = get_global_mouse_position()
 	get_input()
 	move_and_slide()
 	
@@ -65,18 +61,7 @@ func die():
 	player_died.emit()
 	GlobalValues.dead = true
 
-func toggle_gun_board():
-	gun_board_toggled.emit()
-	if active_gun_board == null:
-		active_gun_board = gun_board.instantiate()
-		active_gun_board.z_index = 2
-		ui_layer.add_child(active_gun_board)
-		active_gun_board.player_gun.connect(equip_weapon)
-	else:
-		active_gun_board.queue_free()
-		active_gun_board = null
-	
-func equip_weapon(weapon_name):
+func _equip_weapon(weapon_name):
 	if weapon:
 		weapon.queue_free()
 	if weapon_dict.has(weapon_name):

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://csn8i4j4euoba" path="res://scripts/UI/gun_board/gun_board.gd" id="1_lixc6"]
 [ext_resource type="Texture2D" uid="uid://0r3arx4chvxn" path="res://sprites/player/weapons/ak_47_0001.png" id="2_tsyv0"]
 [ext_resource type="Texture2D" uid="uid://csl6f0lvh17ip" path="res://sprites/player/weapons/ak_47_0002.png" id="3_hafcg"]
+[ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/enemies/skeleton_loves_bullets.png" id="3_lfj20"]
 [ext_resource type="Texture2D" uid="uid://gfsx6oibvibn" path="res://sprites/player/weapons/deagle_0001.png" id="4_qg7gu"]
 [ext_resource type="Texture2D" uid="uid://lwqd7fu54oas" path="res://sprites/player/weapons/deagle_0002.png" id="5_lixc6"]
 [ext_resource type="Texture2D" uid="uid://csnsa1usrutml" path="res://sprites/player/weapons/ump_45_0001.png" id="7_pcy7a"]
@@ -21,18 +22,22 @@ script = ExtResource("1_lixc6")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1077540385]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -512.0
-offset_top = -256.0
-offset_right = 512.0
-offset_bottom = 256.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_6loy6")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=626413130]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 421.0
+offset_right = 1064.0
+offset_bottom = 1501.0
+scale = Vector2(0.585, 0.585)
+texture = ExtResource("3_lfj20")
+expand_mode = 3
 
 [node name="ak_47" type="TextureButton" parent="TextureRect" unique_id=315154596]
 layout_mode = 1
@@ -41,13 +46,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -409.0
-offset_top = -173.0
-offset_right = -334.969
-offset_bottom = -152.45737
+offset_left = -819.0
+offset_top = -333.0
+offset_right = -744.969
+offset_bottom = -312.45737
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(5.16, 5.16)
+scale = Vector2(6.81, 6.81)
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource("2_tsyv0")
@@ -62,11 +67,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -412.0
-offset_top = -39.0
-offset_right = -385.9035
-offset_bottom = -22.114044
-scale = Vector2(4.56, 4.56)
+offset_left = -155.00006
+offset_top = -302.0
+offset_right = -128.90356
+offset_bottom = -285.114
+scale = Vector2(5.675, 5.675)
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource("4_qg7gu")
@@ -82,11 +87,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -227.0
-offset_top = -55.0
-offset_right = -163.0
-offset_bottom = 9.0
-scale = Vector2(4.56, 4.56)
+offset_left = -368.0
+offset_top = -128.00003
+offset_right = -306.0
+offset_bottom = -98.00003
+scale = Vector2(4.98, 4.98)
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource("7_pcy7a")

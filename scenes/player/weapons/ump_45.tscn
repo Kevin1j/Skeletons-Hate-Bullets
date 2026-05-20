@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/player/weapons/bullet_basic.tscn" id="3_u76w3"]
 
 [node name="Ump45" type="Sprite2D" unique_id=1182791719]
-position = Vector2(1.5, -5)
+position = Vector2(1.5, -4)
 scale = Vector2(-0.328, 0.328)
 texture = ExtResource("1_rfpj3")
 script = ExtResource("2_u22gf")
@@ -13,6 +13,7 @@ bullet_scene = ExtResource("3_u76w3")
 fire_rate = 15.0
 damage = 20.0
 pierce = 1
+gun_position = -1.0
 
 [node name="MuzzlePoint" type="Marker2D" parent="." unique_id=1665637786]
 position = Vector2(31, -5)
