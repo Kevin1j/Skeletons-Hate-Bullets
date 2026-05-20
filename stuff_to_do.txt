@@ -3,6 +3,9 @@ v0.1.0:
 	2. Gun shop merchant enables the gun board which has locked guns that can be purchased with bones. 
 	3. Castle should have boundaries that cannot be crossed by the player. 
 	4. There should be a highscore feature that persisits round to round. 
+	5. Timer stops counting after death. 
+	6. Fix restart bug where timer goes some amount (0.14) and a single skeleton spawns. Separate game stop and reset logic. 
+	7. Add UMP-45 bullet spray. 
 
 v0.1.1: Guns
 	1. Skeletons drop health, some sort of ability. 
@@ -17,6 +20,15 @@ v0.1.2: Skeletons
 	2. Skeleton with a bow should be implemented
 	3. Runner skeleton should be implemented (fast and weak)
 	4. Better spawn logic: Game should get harder as round progresses, enemies spawn perhaps in groups. 
+	5. Obstacles that randomly spawn on the playing field (rocks) to obstruct player. 
+
+v0.1.3: UI
+	1. Title screen that loads before the courtyard
+	2. Achievements tab that has 2-3 achievemenets
+	3. Bullets cannot go through castle walls
+	4. Credits? 
+	5. Title screen has some sort of animation like skeletons running around or player shooting, etc. 
+	6. Death screen has bloody player. 
 
 v0.2.0: Upgrades
 	1. Score now functions as xp and levels the player up periodically, which grants a choice of upgrades for the gun in round. 
