@@ -21,7 +21,8 @@ func _ready():
 func _on_trigger_area_body_entered(body):
 	if body.is_in_group("player"):
 		trigger_area.set_deferred("monitoring", false)
-		environment_layer.set_cell(target_tile, source_id, closed_door)
+		#FIX WHEN RESIZING IS COMPLETE
+		#environment_layer.set_cell(target_tile, source_id, closed_door)
 		spawner = enemy_spawner.instantiate()
 		spawner.player = player
 		spawner.restart = restart
@@ -30,5 +31,5 @@ func _on_trigger_area_body_entered(body):
 func _on_round_over():
 	if spawner != null and is_instance_valid(spawner):
 		spawner.queue_free()
-	environment_layer.set_cell(target_tile, source_id, open_door)
+	#environment_layer.set_cell(target_tile, source_id, open_door)
 	trigger_area.set_deferred("monitoring", true)

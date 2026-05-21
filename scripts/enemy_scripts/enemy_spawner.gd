@@ -5,7 +5,7 @@ var interval = 1 #seconds between enemy spawn
 @export var restart: Control
 @export var SwordSkeleton: PackedScene 
 @export var BigSkeleton: PackedScene
-@export var spawn_circle: float = 4000
+@export var spawn_circle: float = 0
 var spawnables
 
 
@@ -35,7 +35,7 @@ func spawn_loop():
 		var is_valid_pos = false
 		var attempts = 0 #prevent an infinite while loop
 		while attempts < 100:
-			random_pos = Vector2(randf_range(672, 8348), randf_range(-4798, 3279))
+			random_pos = Vector2(randf_range(115, 1380), randf_range(-800, 525))
 			var distance = random_pos.distance_to(player.global_position)
 			if distance > spawn_circle:
 				is_valid_pos = true
@@ -52,6 +52,6 @@ func spawn_enemy(bad_guy, pos):
 	#var screen_size = get_viewport_rect().size
 	var skeleton = bad_guy.instantiate()
 	skeleton.position = pos  
-	skeleton.scale = Vector2(6.5,6.5)
+	skeleton.scale = Vector2(1,1)
 	get_tree().current_scene.add_child(skeleton)
 		

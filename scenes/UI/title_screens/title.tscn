@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://d4iut3duw5dlc" path="res://sprites/player/player/blode_dude_0011.png" id="13_wi151"]
 [ext_resource type="Texture2D" uid="uid://cbr0l6ldtdyii" path="res://sprites/player/player/blode_dude_0012.png" id="14_ha6wm"]
 [ext_resource type="Texture2D" uid="uid://cglgg8rmkbtku" path="res://sprites/player/player/blode_dude_0013.png" id="15_pwfdr"]
-[ext_resource type="Texture2D" uid="uid://buhnyjr00rd1c" path="res://sprites/player/weapons/ak_47.png" id="16_olo6p"]
+[ext_resource type="Texture2D" uid="uid://0r3arx4chvxn" path="res://sprites/player/weapons/ak_47_0001.png" id="16_dlc6i"]
 [ext_resource type="Texture2D" uid="uid://ba6dp73e2b5ee" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0001.png" id="17_2gr3j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w0xow"]
@@ -169,7 +169,7 @@ flip_h = true
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect/AnimatedSprite2D" unique_id=1611192579]
 position = Vector2(4.9056606, 7.2776284)
 scale = Vector2(0.265, 0.265)
-texture = ExtResource("16_olo6p")
+texture = ExtResource("16_dlc6i")
 flip_h = true
 
 [node name="Acknowledgments" type="Button" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect" unique_id=824215528]

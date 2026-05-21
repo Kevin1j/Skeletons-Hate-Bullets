@@ -96,7 +96,6 @@ bg_color = Color(1, 0, 0, 1)
 
 [node name="player" type="CharacterBody2D" unique_id=1938038777 groups=["player"]]
 y_sort_enabled = true
-scale = Vector2(5, 5)
 collision_layer = 3
 script = ExtResource("1_8ydkj")
 movement_speed = 500
