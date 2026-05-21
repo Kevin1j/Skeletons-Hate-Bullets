@@ -3,6 +3,7 @@ class_name Enemy
 
 @export var attack_range = 80
 @export var bones = 1
+@export var enemy_type: String
 @export var enemy_score = 1 #How many points is the enemy worth when killed? 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hit_box = $HitBox
@@ -22,6 +23,8 @@ func take_damage(amount):
 	if current_health <= 0: die()
 		
 func die():
+	var current_kills = Achievements.get(enemy_type + "s_killed")
+	Achievements.set(enemy_type + "s_killed", current_kills + 1)
 	if is_dead: return
 	is_dead = true
 	animated_sprite.play("die")
@@ -37,7 +40,6 @@ func increase_score(amount):
 	ScoreManager.score += amount
 
 func _on_hit_box_body_entered(body):
-	print("Something entered the hitbox: ", body.name)
 	if is_collectible and body.is_in_group("player") and body.alive == true:
 		bones_collected()
 		

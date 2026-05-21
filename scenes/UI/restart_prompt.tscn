@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://v2gb5w511s7"]
 
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="1_d4lh5"]
 [ext_resource type="Script" uid="uid://bl4h0kifbubwo" path="res://scripts/UI/restart_prompt.gd" id="1_x7bsi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7bsi"]
@@ -25,6 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_d4lh5")
 script = ExtResource("1_x7bsi")
 
 [node name="Panel" type="Panel" parent="." unique_id=1573236045]
@@ -77,15 +79,26 @@ layout_mode = 2
 
 [node name="Label2" type="Label" parent="Panel/VBoxContainer" unique_id=449137735]
 layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Perhaps you just need to try harder?"
 horizontal_alignment = 1
 
-[node name="RestartButton" type="Button" parent="Panel/VBoxContainer" unique_id=338499963]
-custom_minimum_size = Vector2(400, 0)
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=1057468592]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/outline_size = 0
-theme_override_font_sizes/font_size = 50
-text = "Try Again?"
 
-[connection signal="pressed" from="Panel/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[node name="RestartButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=338499963]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Try Again"
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer/HBoxContainer" unique_id=1781336296]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=713029120]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Menu"
+
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

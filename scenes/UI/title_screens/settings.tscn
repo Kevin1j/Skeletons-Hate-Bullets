@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dacxdffagx6af"]
+
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="1_mpy1c"]
+[ext_resource type="Script" uid="uid://dhpoie4iq4hkj" path="res://scripts/UI/settings.gd" id="2_anem2"]
+
+[node name="Settings" type="Control" unique_id=2147266127]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_mpy1c")
+script = ExtResource("2_anem2")
+
+[node name="BackButton" type="Button" parent="." unique_id=1638279051]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Back
+"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc3uvq87sn8gh"
-path="res://.godot/imported/blode_dude_0007.png-667ddb2c98ec82c2a5cc7340235acbc0.ctex"
+uid="uid://cbr0l6ldtdyii"
+path="res://.godot/imported/blode_dude_0012.png-070bd3be4f4ee1321d13800544d30b38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/blode_dude_0007.png"
-dest_files=["res://.godot/imported/blode_dude_0007.png-667ddb2c98ec82c2a5cc7340235acbc0.ctex"]
+source_file="res://sprites/player/player/blode_dude_0012.png"
+dest_files=["res://.godot/imported/blode_dude_0012.png-070bd3be4f4ee1321d13800544d30b38.ctex"]
 
 [params]
 

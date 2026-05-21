@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0k6vfwjvsfkh"
-path="res://.godot/imported/blode_dude_0009.png-df75233b26343742c1a0f0489e549ba0.ctex"
+uid="uid://bsci1d4iyg5eg"
+path="res://.godot/imported/achievement_check_0002.png-28f91926f323411726beffc872f15449.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/blode_dude_0009.png"
-dest_files=["res://.godot/imported/blode_dude_0009.png-df75233b26343742c1a0f0489e549ba0.ctex"]
+source_file="res://sprites/player/achievements/achievement_check_0002.png"
+dest_files=["res://.godot/imported/achievement_check_0002.png-28f91926f323411726beffc872f15449.ctex"]
 
 [params]
 

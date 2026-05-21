@@ -28,3 +28,7 @@ func _on_restart_button_pressed() -> void:
 	round_over.emit()
 	player_node.alive = true
 	player_node.reset_health()
+
+
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/UI/title_screens/title.tscn")

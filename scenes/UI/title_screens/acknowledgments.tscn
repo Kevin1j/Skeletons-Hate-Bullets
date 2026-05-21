@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://rvxur3fo3vq7"]
+
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="1_qwjey"]
+[ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/enemies/skeleton_loves_bullets.png" id="2_eid13"]
+
+[node name="Acknowledgments" type="Control" unique_id=1763222354]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qwjey")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1207118876]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_eid13")

@@ -10,12 +10,10 @@ var active_gun_board = null
 signal gun_board_toggled
 
 func _process(_delta):
-	print(is_in_activate_area)
 	if Input.is_action_just_pressed("interact") and is_in_activate_area:
 		toggle_gun_board()
 
 func toggle_gun_board():
-	print("toggled")
 	gun_board_toggled.emit()
 	if active_gun_board == null:
 		active_gun_board = gun_board.instantiate()

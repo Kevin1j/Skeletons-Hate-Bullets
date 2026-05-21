@@ -1,74 +1,64 @@
 [gd_scene format=3 uid="uid://bvn5boulc7513"]
 
-[ext_resource type="FontFile" uid="uid://g1xxi88ajdo7" path="res://sprites/VCR_OSD_MONO_1.001.ttf" id="1_xymd6"]
-[ext_resource type="Texture2D" uid="uid://cqx0h3nfpo3fw" path="res://sprites/player/blode_dude_0001.png" id="2_16ajc"]
-[ext_resource type="Script" uid="uid://p5dst6cbceoa" path="res://scripts/UI/title.gd" id="2_w0xow"]
-[ext_resource type="Texture2D" uid="uid://bdhvi5ni3yawl" path="res://sprites/player/blode_dude_0002.png" id="3_w0xow"]
-[ext_resource type="Texture2D" uid="uid://dw2k20qe172fl" path="res://sprites/player/blode_dude_0003.png" id="4_auno3"]
-[ext_resource type="Texture2D" uid="uid://djc5th27xicvf" path="res://sprites/player/blode_dude_0004.png" id="5_jp7g2"]
-[ext_resource type="Texture2D" uid="uid://bmt6aumpc337o" path="res://sprites/player/blode_dude_0005.png" id="6_mt6cb"]
-[ext_resource type="Texture2D" uid="uid://nyn7k3jr067l" path="res://sprites/player/blode_dude_0006.png" id="7_l8ym3"]
-[ext_resource type="Texture2D" uid="uid://dc3uvq87sn8gh" path="res://sprites/player/blode_dude_0007.png" id="8_hgjvp"]
-[ext_resource type="Texture2D" uid="uid://kvnamuff4djr" path="res://sprites/player/blode_dude_0008.png" id="9_2qmc1"]
-[ext_resource type="Texture2D" uid="uid://c0k6vfwjvsfkh" path="res://sprites/player/blode_dude_0009.png" id="10_335ce"]
-[ext_resource type="Texture2D" uid="uid://b6q3ucwdxfxik" path="res://sprites/player/blode_dude_0010.png" id="11_pplo3"]
-[ext_resource type="Texture2D" uid="uid://d4iut3duw5dlc" path="res://sprites/player/blode_dude_0011.png" id="12_b072g"]
-[ext_resource type="Texture2D" uid="uid://cbr0l6ldtdyii" path="res://sprites/player/blode_dude_0012.png" id="13_35idn"]
-[ext_resource type="Texture2D" uid="uid://cglgg8rmkbtku" path="res://sprites/player/blode_dude_0013.png" id="14_x6qh4"]
-[ext_resource type="Texture2D" uid="uid://buhnyjr00rd1c" path="res://sprites/player/weapons/ak_47.png" id="15_16ajc"]
-[ext_resource type="Texture2D" uid="uid://ba6dp73e2b5ee" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0001.png" id="17_auno3"]
-
-[sub_resource type="Theme" id="Theme_v74nl"]
-default_font = ExtResource("1_xymd6")
-Button/font_sizes/font_size = 80
-Label/colors/font_color = Color(0.8646751, 0.86467516, 0.8646751, 1)
-Label/colors/font_outline_color = Color(0, 0, 0, 1)
-Label/constants/line_spacing = 26
-Label/constants/outline_size = 40
-Label/font_sizes/font_size = 150
-Label/fonts/font = ExtResource("1_xymd6")
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="1_dlc6i"]
+[ext_resource type="Script" uid="uid://p5dst6cbceoa" path="res://scripts/UI/title.gd" id="2_iu8dm"]
+[ext_resource type="Texture2D" uid="uid://cqx0h3nfpo3fw" path="res://sprites/player/player/blode_dude_0001.png" id="3_dvypj"]
+[ext_resource type="Texture2D" uid="uid://bdhvi5ni3yawl" path="res://sprites/player/player/blode_dude_0002.png" id="4_21bdl"]
+[ext_resource type="Texture2D" uid="uid://dw2k20qe172fl" path="res://sprites/player/player/blode_dude_0003.png" id="5_lnutr"]
+[ext_resource type="Texture2D" uid="uid://djc5th27xicvf" path="res://sprites/player/player/blode_dude_0004.png" id="6_hx0ir"]
+[ext_resource type="Texture2D" uid="uid://bmt6aumpc337o" path="res://sprites/player/player/blode_dude_0005.png" id="7_xap54"]
+[ext_resource type="Texture2D" uid="uid://nyn7k3jr067l" path="res://sprites/player/player/blode_dude_0006.png" id="8_a84sl"]
+[ext_resource type="Texture2D" uid="uid://dc3uvq87sn8gh" path="res://sprites/player/player/blode_dude_0007.png" id="9_u10kd"]
+[ext_resource type="Texture2D" uid="uid://kvnamuff4djr" path="res://sprites/player/player/blode_dude_0008.png" id="10_ospxr"]
+[ext_resource type="Texture2D" uid="uid://c0k6vfwjvsfkh" path="res://sprites/player/player/blode_dude_0009.png" id="11_jib6r"]
+[ext_resource type="Texture2D" uid="uid://b6q3ucwdxfxik" path="res://sprites/player/player/blode_dude_0010.png" id="12_tsidt"]
+[ext_resource type="Texture2D" uid="uid://d4iut3duw5dlc" path="res://sprites/player/player/blode_dude_0011.png" id="13_wi151"]
+[ext_resource type="Texture2D" uid="uid://cbr0l6ldtdyii" path="res://sprites/player/player/blode_dude_0012.png" id="14_ha6wm"]
+[ext_resource type="Texture2D" uid="uid://cglgg8rmkbtku" path="res://sprites/player/player/blode_dude_0013.png" id="15_pwfdr"]
+[ext_resource type="Texture2D" uid="uid://buhnyjr00rd1c" path="res://sprites/player/weapons/ak_47.png" id="16_olo6p"]
+[ext_resource type="Texture2D" uid="uid://ba6dp73e2b5ee" path="res://sprites/enemies/sword_skeleton/walk animation/SwordSkeleton_Walk_0001.png" id="17_2gr3j"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w0xow"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_16ajc")
+"texture": ExtResource("3_dvypj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_w0xow")
+"texture": ExtResource("4_21bdl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_auno3")
+"texture": ExtResource("5_lnutr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_jp7g2")
+"texture": ExtResource("6_hx0ir")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_mt6cb")
+"texture": ExtResource("7_xap54")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_l8ym3")
+"texture": ExtResource("8_a84sl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_hgjvp")
+"texture": ExtResource("9_u10kd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_2qmc1")
+"texture": ExtResource("10_ospxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_335ce")
+"texture": ExtResource("11_jib6r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_pplo3")
+"texture": ExtResource("12_tsidt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_b072g")
+"texture": ExtResource("13_wi151")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_35idn")
+"texture": ExtResource("14_ha6wm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_x6qh4")
+"texture": ExtResource("15_pwfdr")
 }],
 "loop": true,
 "name": &"default",
@@ -82,8 +72,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_v74nl")
-script = ExtResource("2_w0xow")
+theme = ExtResource("1_dlc6i")
+script = ExtResource("2_iu8dm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=136641731]
 layout_mode = 1
@@ -114,6 +104,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 150
 text = "Skeletons Hate 
 Bullets"
 horizontal_alignment = 1
@@ -156,7 +148,7 @@ layout_mode = 2
 [node name="Achievements" type="Button" parent="TextureRect/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1233921007]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Credits"
+text = "Achievements"
 
 [node name="Control4" type="Control" parent="TextureRect/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1852468020]
 custom_minimum_size = Vector2(0, 50)
@@ -177,7 +169,7 @@ flip_h = true
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect/AnimatedSprite2D" unique_id=1611192579]
 position = Vector2(4.9056606, 7.2776284)
 scale = Vector2(0.265, 0.265)
-texture = ExtResource("15_16ajc")
+texture = ExtResource("16_olo6p")
 flip_h = true
 
 [node name="Acknowledgments" type="Button" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect" unique_id=824215528]
@@ -200,19 +192,22 @@ text = "Acknowledgments"
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect" unique_id=758261650]
 position = Vector2(715.99994, 177.99997)
 scale = Vector2(13.86, 13.86)
-texture = ExtResource("17_auno3")
+texture = ExtResource("17_2gr3j")
 flip_h = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect" unique_id=449282568]
 position = Vector2(869.99994, 127.99997)
 scale = Vector2(12.205, 12.205)
-texture = ExtResource("17_auno3")
+texture = ExtResource("17_2gr3j")
 flip_h = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="TextureRect/VBoxContainer/HBoxContainer/TextureRect" unique_id=1624545255]
 position = Vector2(795, 364)
 scale = Vector2(15.335, 15.335)
-texture = ExtResource("17_auno3")
+texture = ExtResource("17_2gr3j")
 flip_h = true
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/HBoxContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/HBoxContainer/VBoxContainer/Achievements" to="." method="_on_achievements_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/HBoxContainer/TextureRect/Acknowledgments" to="." method="_on_acknowledgments_pressed"]

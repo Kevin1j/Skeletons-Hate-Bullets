@@ -1,0 +1,28 @@
+[gd_resource type="Theme" format=3 uid="uid://cam5fd3x2y36f"]
+
+[ext_resource type="FontFile" uid="uid://g1xxi88ajdo7" path="res://sprites/VCR_OSD_MONO_1.001.ttf" id="1_6omp1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6omp1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4d3v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3mrbe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f2tid"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6m7ux"]
+
+[resource]
+default_font = ExtResource("1_6omp1")
+Button/font_sizes/font_size = 80
+Label/colors/font_color = Color(0.8646751, 0.86467516, 0.8646751, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/line_spacing = 26
+Label/constants/outline_size = 0
+Label/font_sizes/font_size = 80
+Label/fonts/font = ExtResource("1_6omp1")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_6omp1")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_d4d3v")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_3mrbe")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_f2tid")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_6m7ux")
