@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uaiy82ucd88y"
-path="res://.godot/imported/untitled_0001.png-5105f920525d11c0a98969432e403b06.ctex"
+uid="uid://bkkwcoq10jjow"
+path="res://.godot/imported/BasicBase.png-d2673d41026b2b081b10e954e61cdb0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/env_tiles/untitled_0001.png"
-dest_files=["res://.godot/imported/untitled_0001.png-5105f920525d11c0a98969432e403b06.ctex"]
+source_file="res://sprites/player/weapons/machine gun/BasicBase.png"
+dest_files=["res://.godot/imported/BasicBase.png-d2673d41026b2b081b10e954e61cdb0c.ctex"]
 
 [params]
 

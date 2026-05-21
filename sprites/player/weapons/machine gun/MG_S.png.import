@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b231j7h31iuo6"
-path="res://.godot/imported/grass_tiles(Tilemap 5) _0001.png-b858052c50f0e4988a35ceae02093b58.ctex"
+uid="uid://dfgji45i6ndw5"
+path="res://.godot/imported/MG_S.png-d3c4938506f9a72976add360c68a3669.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/env_tiles/grass_tiles(Tilemap 5) _0001.png"
-dest_files=["res://.godot/imported/grass_tiles(Tilemap 5) _0001.png-b858052c50f0e4988a35ceae02093b58.ctex"]
+source_file="res://sprites/player/weapons/machine gun/MG_S.png"
+dest_files=["res://.godot/imported/MG_S.png-d3c4938506f9a72976add360c68a3669.ctex"]
 
 [params]
 

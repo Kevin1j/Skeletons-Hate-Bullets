@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv0djwrft6wi8"
-path="res://.godot/imported/MG_W.png-5d98d9bb9ade924bd3fccac45d62b5e2.ctex"
+uid="uid://cb8rfmiitqft6"
+path="res://.godot/imported/MG_E.png-529d660ca8fa42e096137021af9db87b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/player/weapons/MG_W.png"
-dest_files=["res://.godot/imported/MG_W.png-5d98d9bb9ade924bd3fccac45d62b5e2.ctex"]
+source_file="res://sprites/player/weapons/machine gun/MG_E.png"
+dest_files=["res://.godot/imported/MG_E.png-529d660ca8fa42e096137021af9db87b.ctex"]
 
 [params]
 

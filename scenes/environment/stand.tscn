@@ -29,7 +29,7 @@ script = ExtResource("1_70emg")
 position = Vector2(-20.8, 1.0000005)
 scale = Vector2(0.025, 0.025)
 sprite_frames = SubResource("SpriteFrames_lnw1r")
-offset = Vector2(0, -314.57)
+offset = Vector2(0, -314)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075541699]
 position = Vector2(0.2, 0)

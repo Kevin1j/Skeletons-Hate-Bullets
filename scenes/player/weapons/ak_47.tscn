@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btxrrog8k7tmp"]
 
-[ext_resource type="Texture2D" uid="uid://buhnyjr00rd1c" path="res://sprites/player/weapons/ak_47.png" id="1_mb4bs"]
+[ext_resource type="Texture2D" uid="uid://0r3arx4chvxn" path="res://sprites/player/weapons/ak_47_0001.png" id="1_mb4bs"]
 [ext_resource type="Script" uid="uid://dnyv5g38ntxw4" path="res://scripts/player/weapons/ak47.gd" id="2_5niar"]
 [ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/player/weapons/bullet_basic.tscn" id="3_dujyk"]
 
@@ -15,4 +15,4 @@ damage = 50.0
 gun_position = 4.5
 
 [node name="MuzzlePoint" type="Marker2D" parent="." unique_id=1665637786]
-position = Vector2(-35, -4.5)
+position = Vector2(-33, -6)

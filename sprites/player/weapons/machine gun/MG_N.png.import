@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crg7sl3j3ibud"
-path="res://.godot/imported/untitled_0002.png-045e58b57d9a39895db0eb5aa1685ce4.ctex"
+uid="uid://c4wxmvs0ea4ux"
+path="res://.godot/imported/MG_N.png-aaccc4ba4af156638e980c11a64dd9c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/env_tiles/untitled_0002.png"
-dest_files=["res://.godot/imported/untitled_0002.png-045e58b57d9a39895db0eb5aa1685ce4.ctex"]
+source_file="res://sprites/player/weapons/machine gun/MG_N.png"
+dest_files=["res://.godot/imported/MG_N.png-aaccc4ba4af156638e980c11a64dd9c2.ctex"]
 
 [params]
 

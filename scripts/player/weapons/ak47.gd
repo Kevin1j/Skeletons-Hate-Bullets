@@ -1,4 +1,4 @@
 extends Gun
 
 func _ready(): 
-	muzzle_x_location = -35
+	muzzle_x_location = -33
