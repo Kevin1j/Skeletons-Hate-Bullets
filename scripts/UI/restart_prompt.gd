@@ -21,7 +21,7 @@ func _on_restart_button_pressed() -> void:
 	
 	await get_tree().process_frame
 	player_node.current_health = 100
-	player_node.position = Vector2(4000, 4000)
+	player_node.position = Vector2(700, 600)
 	ScoreManager.score = 0
 	GlobalValues.dead = false
 	visible = false

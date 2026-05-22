@@ -13,12 +13,12 @@ var weapon_dict = {
 }
 
 func _ready():
-	current_health = max_health
+	super()
 	
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * movement_speed
+	velocity = input_direction.normalized() * movement_speed
 	var direction_to_mouse = get_global_mouse_position() - global_position
 	if weapon.flip_h == true:
 		weapon.rotation = direction_to_mouse.angle()

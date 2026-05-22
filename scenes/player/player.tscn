@@ -98,7 +98,7 @@ bg_color = Color(1, 0, 0, 1)
 y_sort_enabled = true
 collision_layer = 3
 script = ExtResource("1_8ydkj")
-movement_speed = 500
+movement_speed = 120
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=520418253]
 sprite_frames = SubResource("SpriteFrames_dw050")
@@ -113,7 +113,7 @@ position = Vector2(0, -2.9802322e-08)
 shape = SubResource("RectangleShape2D_bwjto")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1786163980]
-zoom = Vector2(0.564, 0.564)
+zoom = Vector2(2, 2)
 limit_smoothed = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=390015037]
