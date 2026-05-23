@@ -26,6 +26,7 @@ func _on_trigger_area_body_entered(body):
 		spawner = enemy_spawner.instantiate()
 		spawner.player = player
 		spawner.restart = restart
+		restart.round_over.connect(spawner.end_round)
 		add_child(spawner)
 		
 func _on_round_over():

@@ -113,7 +113,7 @@ position = Vector2(0, -2.9802322e-08)
 shape = SubResource("RectangleShape2D_bwjto")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1786163980]
-zoom = Vector2(2, 2)
+zoom = Vector2(4, 4)
 limit_smoothed = true
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=390015037]

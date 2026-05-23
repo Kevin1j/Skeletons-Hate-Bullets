@@ -11,10 +11,11 @@ var spawnables
 
 func _ready():	
 	spawn_loop()
-	restart.round_over.connect(end_round)
+	#restart.round_over.connect(end_round)
 	
 func end_round():
 	ScoreManager.time = 0.00
+	queue_free()
 	
 func spawn_loop():
 	var random_pos = Vector2.ZERO
@@ -54,4 +55,3 @@ func spawn_enemy(bad_guy, pos):
 	skeleton.position = pos  
 	skeleton.scale = Vector2(1,1)
 	get_tree().current_scene.add_child(skeleton)
-		
