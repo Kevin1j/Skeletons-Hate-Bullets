@@ -1,11 +1,11 @@
 v0.1.0: 
-	1. Bones drop from enemies and can be collected by player. Bones from found persist round to round. 
-	2. Gun shop merchant enables the gun board which has locked guns that can be purchased with bones. 
-	3. Castle should have boundaries that cannot be crossed by the player. 
-	4. There should be a highscore feature that persisits round to round. 
-	5. Timer stops counting after death. 
-	6. Fix restart bug where timer goes some amount (0.14) and a single skeleton spawns. Separate game stop and reset logic. 
-	7. Add UMP-45 bullet spray. 
+	x1. Bones drop from enemies and can be collected by player. Bones from found persist round to round. 
+	x2. Gun shop merchant enables the gun board which has locked guns that can be purchased with bones. 
+	x3. Castle should have boundaries that cannot be crossed by the player. 
+	x4. There should be a highscore feature that persisits round to round. 
+	x5. Timer stops counting after death. 
+	x6. Fix restart bug where timer goes some amount (0.14) and a single skeleton spawns. Separate game stop and reset logic. 
+	x7. Add UMP-45 bullet spray. 
 
 v0.1.1: Guns
 	1. Skeletons drop health, some sort of ability. 
