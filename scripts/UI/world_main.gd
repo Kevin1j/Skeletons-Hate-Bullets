@@ -8,11 +8,11 @@ var spawner
 @export var player: Character
 @export var restart: Control
 
-var target_tile: Vector2i = Vector2i(13,10)
-var source_id: int = 0
+var target_tile: Vector2i = Vector2i(22,17)
+var source_id: int = 1
 #get the door states
-var open_door: Vector2i = Vector2i(3,5)
-var closed_door: Vector2i = Vector2i(7,1)
+var open_door: Vector2i = Vector2i(4,1)
+var closed_door: Vector2i = Vector2i(4,3)
 
 func _ready():
 	trigger_area.body_entered.connect(_on_trigger_area_body_entered)
@@ -21,8 +21,7 @@ func _ready():
 func _on_trigger_area_body_entered(body):
 	if body.is_in_group("player"):
 		trigger_area.set_deferred("monitoring", false)
-		#FIX WHEN RESIZING IS COMPLETE
-		#environment_layer.set_cell(target_tile, source_id, closed_door)
+		environment_layer.set_cell(target_tile, source_id, closed_door)
 		spawner = enemy_spawner.instantiate()
 		spawner.player = player
 		spawner.restart = restart
@@ -32,5 +31,5 @@ func _on_trigger_area_body_entered(body):
 func _on_round_over():
 	if spawner != null and is_instance_valid(spawner):
 		spawner.queue_free()
-	#environment_layer.set_cell(target_tile, source_id, open_door)
+	environment_layer.set_cell(target_tile, source_id, open_door)
 	trigger_area.set_deferred("monitoring", true)

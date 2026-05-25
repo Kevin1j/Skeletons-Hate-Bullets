@@ -12,7 +12,7 @@ offset = Vector2(-1, -0.5)
 script = ExtResource("2_dqqw0")
 bullet_scene = ExtResource("3_x76g2")
 fire_rate = 1.25
-pierce = 4
+pierce = 5
 gun_position = 4.5
 
 [node name="MuzzlePoint" type="Marker2D" parent="." unique_id=1665637786]

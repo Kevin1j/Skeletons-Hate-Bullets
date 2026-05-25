@@ -6,6 +6,7 @@ class_name Gun
 @export var damage: float = 200
 @export var pierce: int = 0
 @export var gun_position: float = 0
+@export var velocity_effected_bullet: int = 0 #whether or not the bullet is affected by the players movement
 @onready var muzzle_point = $MuzzlePoint
 @onready var player_sprite = get_parent()
 @onready var player: Node2D = $".".get_parent().get_parent()
@@ -28,6 +29,7 @@ func shoot():
 	bullet.player_velocity = player.velocity
 	bullet.damage = damage
 	bullet.pierce = pierce
+	bullet.velocity_effected_bullet = velocity_effected_bullet
 	bullet.position = $MuzzlePoint.global_position 
 	bullet.direction = (get_global_mouse_position() - player.global_position).normalized()
 	get_tree().current_scene.add_child(bullet)

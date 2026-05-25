@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://byijbok28b77n" path="res://sprites/player/player/blode_dude_walking_0001.png" id="15_swkrn"]
 [ext_resource type="Texture2D" uid="uid://bmuyribhyete3" path="res://sprites/player/player/blode_dude_walking_0002.png" id="16_w7egs"]
 [ext_resource type="Texture2D" uid="uid://c8dauua0v76r4" path="res://sprites/player/player/blode_dude_walking_0003.png" id="17_vqcnq"]
-[ext_resource type="PackedScene" uid="uid://3t51hbrjffvy" path="res://scenes/player/weapons/deagle.tscn" id="18_lgqa7"]
 [ext_resource type="Texture2D" uid="uid://bp0csjj7rai7j" path="res://sprites/player/player/blode_dude_walking_0004.png" id="18_x7sd6"]
+[ext_resource type="PackedScene" uid="uid://btxrrog8k7tmp" path="res://scenes/player/weapons/ak_47.tscn" id="19_8ydkj"]
 [ext_resource type="Script" uid="uid://0ebsvt1thl3r" path="res://scripts/player/player_health_bar.gd" id="21_hj5pe"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
@@ -106,7 +106,7 @@ animation = &"walk"
 speed_scale = 2.039
 offset = Vector2(2, -11.5)
 
-[node name="Deagle" parent="AnimatedSprite2D" unique_id=1182791719 instance=ExtResource("18_lgqa7")]
+[node name="Ak47" parent="AnimatedSprite2D" unique_id=1182791719 instance=ExtResource("19_8ydkj")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=765287732]
 position = Vector2(0, -2.9802322e-08)

@@ -68,6 +68,7 @@ func _equip_weapon(weapon_name):
 		var new_gun = weapon_dict[weapon_name].instantiate()
 		player_sprite.add_child(new_gun)
 		weapon = new_gun
+		GlobalValues.weapon_equipped = weapon_name
 		
 		
 		
