@@ -8,6 +8,7 @@ var interval = 1 #seconds between enemy spawn
 @export var spawn_circle: float = 0
 var spawnables
 
+signal enemy_spawned(enemy: Enemy)
 
 func _ready():	
 	spawn_loop()
@@ -54,4 +55,5 @@ func spawn_enemy(bad_guy, pos):
 	var skeleton = bad_guy.instantiate()
 	skeleton.position = pos  
 	skeleton.scale = Vector2(1,1)
+	enemy_spawned.emit(skeleton)
 	get_tree().current_scene.add_child(skeleton)

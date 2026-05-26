@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://ck4gkog6w2nbd" path="res://scripts/UI/world_main.gd" id="2_a8y0u"]
 [ext_resource type="Texture2D" uid="uid://bbu1dllh11nss" path="res://sprites/env_tiles/dirt_path.png" id="3_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://c8cmys7e8ke2p" path="res://scenes/enemy_scenes/enemy_spawner.tscn" id="3_eb6dy"]
+[ext_resource type="PackedScene" uid="uid://lsi53yv4thsg" path="res://scenes/environment/item_spawner.tscn" id="4_bck7i"]
 [ext_resource type="PackedScene" uid="uid://go2imjljts10" path="res://scenes/player/player.tscn" id="6_tipki"]
 [ext_resource type="Texture2D" uid="uid://ddpuslupbbjib" path="res://sprites/env_tiles/castle_new.png" id="7_bck7i"]
 [ext_resource type="PackedScene" uid="uid://v2gb5w511s7" path="res://scenes/UI/restart_prompt.tscn" id="7_o6xl0"]
@@ -156,7 +157,8 @@ y_sort_enabled = true
 script = ExtResource("2_a8y0u")
 environment_layer = NodePath("catle_new")
 trigger_area = NodePath("GateTrigger")
-enemy_spawner = ExtResource("3_eb6dy")
+enemy_spawner_scene = ExtResource("3_eb6dy")
+item_spawner_scene = ExtResource("4_bck7i")
 player = NodePath("../player")
 restart = NodePath("../CanvasLayer/RestartPrompt")
 

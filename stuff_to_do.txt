@@ -14,6 +14,7 @@ v0.1.1: Guns
 	4. Glock-19 implemented into the gun baord as a playable weapon
 	5. AWP implemented into the gunboard as a playable weapon
 	6. All weapons should still be purchaseable at higher and higher prices with a "defined" order
+	7. Add a version counter on the title screen 
 
 v0.1.2: Skeletons
 	1. Skeleton that throws bones should be implemented

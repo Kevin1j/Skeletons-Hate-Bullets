@@ -12,6 +12,7 @@ var is_dead = false
 var is_collectible = false
 
 signal collected
+signal died(enemy_type: String, enemy_position: Vector2)
 
 func _ready():
 	super._ready()
@@ -27,6 +28,7 @@ func die():
 	Achievements.set(enemy_type + "s_killed", current_kills + 1)
 	if is_dead: return
 	is_dead = true
+	died.emit(self, global_position)
 	animated_sprite.play("die")
 	if not GlobalValues.dead: increase_score(enemy_score)
 	await animated_sprite.animation_finished

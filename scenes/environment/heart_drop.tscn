@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dlje524lb0np0"]
+
+[ext_resource type="Texture2D" uid="uid://brrd7mr2gegfo" path="res://sprites/env_tiles/collectables/heart_drop.png" id="1_dbkig"]
+
+[node name="HeartDrop" type="Node2D" unique_id=1250424697]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1792155486]
+z_index = 1
+texture = ExtResource("1_dbkig")
