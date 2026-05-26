@@ -12,6 +12,7 @@ offset = Vector2(-1, -0.5)
 script = ExtResource("2_dqqw0")
 bullet_scene = ExtResource("3_x76g2")
 fire_rate = 1.25
+damage = 230.0
 pierce = 5
 gun_position = 4.5
 

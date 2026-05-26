@@ -104,16 +104,16 @@ animations = [{
 size = Vector2(6.89061, 17.083)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_805g7"]
-radius = 2.00976
-height = 4.30663
+radius = 4.0
+height = 8.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fl3t7"]
 size = Vector2(18, 43)
 
 [node name="SwordSkeleton" type="CharacterBody2D" unique_id=320838328 groups=["enemies"]]
 y_sort_enabled = true
-collision_layer = 0
-collision_mask = 0
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_1jp34")
 attack_range = 20
 enemy_type = "sword_skeleton"
@@ -136,8 +136,8 @@ collision_mask = 2
 position = Vector2(0, -4.59374)
 shape = SubResource("RectangleShape2D_805g7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1950958818]
-position = Vector2(0, 1.72265)
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=1950958818]
+position = Vector2(0, 0.448)
 shape = SubResource("CapsuleShape2D_805g7")
 
 [node name="SwordHitBox" type="Area2D" parent="." unique_id=260751307]

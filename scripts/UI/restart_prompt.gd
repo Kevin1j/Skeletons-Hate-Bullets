@@ -50,3 +50,5 @@ func _on_menu_button_pressed() -> void:
 func stop():
 	for baddie in get_tree().get_nodes_in_group("enemies"):
 		baddie.queue_free()
+	for item in get_tree().get_nodes_in_group("item"):
+		item.queue_free()

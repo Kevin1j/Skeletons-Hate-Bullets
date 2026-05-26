@@ -24,9 +24,9 @@ func spawn_loop():
 	while true:
 		await get_tree().create_timer(interval).timeout
 		if interval > 0:
-			interval = 1 - 0.0001 * ScoreManager.time**2
+			interval = .9 - 0.00003 * ScoreManager.time**2
 		else:
-			interval = 0.08
+			interval = 0.3
 		var spawn_chance = randi_range(0,99)
 		if spawn_chance < 5 + 10/(1000-ScoreManager.time): #5% change to spawn big skeleton
 			spawn = BigSkeleton
@@ -37,7 +37,7 @@ func spawn_loop():
 		var is_valid_pos = false
 		var attempts = 0 #prevent an infinite while loop
 		while attempts < 100:
-			random_pos = Vector2(randf_range(115, 1380), randf_range(-800, 525))
+			random_pos = Vector2(randf_range(368, 1023), randf_range(527, 176))
 			var distance = random_pos.distance_to(player.global_position)
 			if distance > spawn_circle:
 				is_valid_pos = true

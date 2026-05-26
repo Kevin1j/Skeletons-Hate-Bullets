@@ -41,5 +41,4 @@ func _on_round_over():
 	trigger_area.set_deferred("monitoring", true)
 
 func _on_enemy_spawned(enemy: Enemy):
-	print("enemY_spawned_world_main")
 	enemy.died.connect(item_spawner._on_enemy_died)

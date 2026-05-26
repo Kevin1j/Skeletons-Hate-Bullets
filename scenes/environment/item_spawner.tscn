@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lsi53yv4thsg"]
 
-[ext_resource type="Script" uid="uid://cq34pka1spyqm" path="res://scripts/environment/item_spawner.gd" id="1_ehow6"]
+[ext_resource type="Script" uid="uid://cq34pka1spyqm" path="res://scripts/environment/items/item_spawner.gd" id="1_ehow6"]
 [ext_resource type="PackedScene" uid="uid://dlje524lb0np0" path="res://scenes/environment/heart_drop.tscn" id="2_as72n"]
 
 [node name="ItemSpawner" type="Node2D" unique_id=183226697]

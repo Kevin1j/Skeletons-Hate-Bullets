@@ -20,9 +20,15 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
 
 func _on_area_entered(_area: Area2D) -> void:
-	if _enemies_pierced > pierce:
-		return
-	_area.get_parent().take_damage(damage)
-	_enemies_pierced += 1
-	if _enemies_pierced > pierce:
-		queue_free()
+	if _area.get_parent().is_in_group("enemies"):
+		if _enemies_pierced > pierce:
+			return
+		_area.get_parent().take_damage(damage)
+		_enemies_pierced += 1
+		if _enemies_pierced > pierce:
+			queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	queue_free()
+	pass # Replace with function body.
