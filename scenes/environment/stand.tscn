@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsj64ycv3pxo5" path="res://scripts/environment/stand.gd" id="1_70emg"]
 [ext_resource type="Texture2D" uid="uid://db2nuyfwownjc" path="res://sprites/env_tiles/stand.png" id="1_lhkcd"]
-[ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/enemies/skeleton_loves_bullets.png" id="2_lnw1r"]
+[ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/Characters/skeleton_loves_bullets.png" id="2_lnw1r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lnw1r"]
 animations = [{

@@ -90,7 +90,7 @@ attack_range = 20
 bones = 3
 enemy_type = "big_skeleton"
 enemy_score = 5
-movement_speed = 60
+base_movement_speed = 60
 max_health = 300
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1730260414]

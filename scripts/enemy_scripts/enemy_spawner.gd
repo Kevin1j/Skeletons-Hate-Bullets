@@ -5,7 +5,7 @@ var interval = 1 #seconds between enemy spawn
 @export var restart: Control
 @export var SwordSkeleton: PackedScene 
 @export var BigSkeleton: PackedScene
-@export var spawn_circle: float = 0
+@export var spawn_circle: float = 40
 var spawnables
 
 signal enemy_spawned(enemy: Enemy)

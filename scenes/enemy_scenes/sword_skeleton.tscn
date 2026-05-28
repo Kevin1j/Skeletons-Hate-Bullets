@@ -117,7 +117,7 @@ collision_mask = 16
 script = ExtResource("1_1jp34")
 attack_range = 20
 enemy_type = "sword_skeleton"
-movement_speed = 50
+base_movement_speed = 50
 metadata/_custom_type_script = "uid://olhh212fgkw6"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=643999040]

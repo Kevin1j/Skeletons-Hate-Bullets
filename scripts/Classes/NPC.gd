@@ -12,35 +12,51 @@ var active_interact_popup = null
 var active_interact = null
 signal interact_toggled
 
+#Variables for Dialog
+var dialog_name: String
+var dialog_signal: String
+var has_interacted: bool = false
+
 func _ready():
 	$ActivateArea.body_entered.connect(_on_activate_area_body_entered)
 	$ActivateArea.body_exited.connect(_on_activate_area_body_exited)
+	Dialogic.signal_event.connect(DialogicSignal)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("interact") and is_in_activate_area:
-		toggle_interact()
+		if has_interacted == false:
+			if Dialogic.current_timeline != null:
+				return
+			Dialogic.start(dialog_name)
+			get_viewport().set_input_as_handled()
+		else:
+			if Dialogic.current_timeline == null:
+				toggle_interact()
+				has_interacted = true
 
 func _on_activate_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		is_in_activate_area = true
 		toggle_interact_popup(body)
-	pass
+	
 func _on_activate_area_body_exited(body: Node2D) -> void:
 	if active_interact != null:
 		toggle_interact()
 	if body.is_in_group("player"):
 		is_in_activate_area = false
 		toggle_interact_popup(body)
-	pass
+	if Dialogic.current_timeline != null:
+		Dialogic.end_timeline(true)
 
 func toggle_interact():
 	interact_toggled.emit()
 	if active_interact == null:
 		active_interact = interact.instantiate()
-		active_interact.equip_weapon.connect(player._equip_weapon)
+		if active_interact.has_method("setup"):
+			active_interact.setup(player)
+		#active_interact.equip_weapon.connect(player._equip_weapon)
 		active_interact.z_index = 2
 		ui_layer.add_child(active_interact)
-		#active_gun_board.player_gun.connect(equip_weapon)
 	else:
 		active_interact.queue_free()
 		active_interact = null
@@ -54,3 +70,8 @@ func toggle_interact_popup(body: Node2D):
 	else:
 		active_interact_popup.queue_free()
 		active_interact_popup = null
+
+func DialogicSignal(arg: String):
+	if arg == dialog_signal:
+		has_interacted = true
+		toggle_interact()

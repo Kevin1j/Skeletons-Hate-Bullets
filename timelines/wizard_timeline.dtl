@@ -1,0 +1,5 @@
+join wizard center [animation="Instant In"]
+wizard: Hello adventurer, I love bones!
+wizard: I will take some bones off your hands and cast a spell so you can get even more bones!
+leave wizard [animation="Instant Out"]
+[signal arg="open_wizard_board"]

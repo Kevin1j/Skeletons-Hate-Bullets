@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dy1gprky0lqvb" path="res://scenes/environment/wizard.tscn" id="9_mkuva"]
 [ext_resource type="PackedScene" uid="uid://bespe8my10ovb" path="res://scenes/UI/gun_board.tscn" id="9_vwe3y"]
 [ext_resource type="PackedScene" uid="uid://80gq8mrdp1p1" path="res://scenes/environment/stand.tscn" id="10_trceg"]
+[ext_resource type="PackedScene" uid="uid://bsahb4441lmvx" path="res://scenes/UI/wizard_board.tscn" id="11_mcf35"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eb6dy"]
 texture = ExtResource("2_85g3d")
@@ -150,9 +151,10 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(79, -826, 64, 595, 1430
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkv2x"]
 size = Vector2(27.91499, 8.783412)
 
-[node name="main" type="Node2D" unique_id=1139964207]
+[node name="main" type="Node2D" unique_id=1139964207 node_paths=PackedStringArray("player_node")]
 y_sort_enabled = true
 script = ExtResource("1_tbgi4")
+player_node = NodePath("player")
 
 [node name="world_main" type="Node2D" parent="." unique_id=320539962 node_paths=PackedStringArray("environment_layer", "trigger_area", "player", "restart")]
 z_as_relative = false
@@ -197,8 +199,10 @@ position = Vector2(780, 594)
 player = NodePath("../../player")
 interact = ExtResource("9_vwe3y")
 
-[node name="Wizard" parent="world_main" unique_id=1354272295 instance=ExtResource("9_mkuva")]
+[node name="Wizard" parent="world_main" unique_id=1354272295 node_paths=PackedStringArray("player") instance=ExtResource("9_mkuva")]
 position = Vector2(605, 590)
+player = NodePath("../../player")
+interact = ExtResource("11_mcf35")
 
 [node name="player" parent="." unique_id=1938038777 instance=ExtResource("6_tipki")]
 position = Vector2(700, 600)

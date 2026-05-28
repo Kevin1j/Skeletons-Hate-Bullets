@@ -1,0 +1,5 @@
+join big_skeleton_character center [z_index="2"]
+big_skeleton_character: Yes, I know. I am large and a skeleton, everyone tells me that.
+big_skeleton_character: Are you going to stand there all day or are you going to buy something?
+leave big_skeleton_character
+[signal arg="enter_big_skeleton_shop"]

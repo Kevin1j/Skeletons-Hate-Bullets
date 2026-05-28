@@ -47,3 +47,6 @@ func validate_state(weapon):
 		weapon.button_pressed = true
 	else:
 		weapon.button_pressed = false
+
+func setup(player_node: Node2D):
+	equip_weapon.connect(player_node._equip_weapon)

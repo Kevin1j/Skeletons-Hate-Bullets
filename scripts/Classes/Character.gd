@@ -1,12 +1,14 @@
 extends CharacterBody2D
 class_name Character
 
-@export var movement_speed: int = 100
+@export var base_movement_speed: int = 100
+var movement_speed: int = 100
 @export var max_health: int = 100
 @export var defense: int
 var current_health: int
 
 func _ready():
+	movement_speed = base_movement_speed
 	current_health = max_health
 	
 func attack():

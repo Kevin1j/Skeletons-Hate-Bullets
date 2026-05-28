@@ -2,8 +2,10 @@ extends Sprite2D
 class_name Gun
 
 @export var bullet_scene: PackedScene 
-@export var fire_rate: float = 1
-@export var damage: float = 200
+@export var base_fire_rate: float = 1
+@export var base_damage: float = 200
+var fire_rate: float
+var damage: float
 @export var pierce: int = 0
 @export var gun_position: float = 0
 @export var velocity_effected_bullet: int = 0 #whether or not the bullet is affected by the players movement
@@ -16,11 +18,16 @@ var muzzle_x_location : int
 var gun_board_open = false
 
 func _ready():
-	player.gun_board_toggled.connect(_on_gun_board_toggled)
-	pass
+	update_stats()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		is_shooting = true
+	elif event.is_action_released("shoot"):
+		is_shooting = false
+		
 func _physics_process(_delta):
-	is_shooting = Input.is_action_pressed("shoot")
+	#is_shooting = Input.is_action_pressed("shoot")
 	if is_shooting && not cooldown && not gun_board_open:
 		shoot()
 
@@ -53,3 +60,7 @@ func _on_gun_board_toggled():
 		gun_board_open = false
 	else:
 		gun_board_open = true
+
+func update_stats():
+	damage = base_damage + base_damage * .1 * GlobalValues.damage_upgrades
+	fire_rate = base_fire_rate + base_fire_rate * .1 * GlobalValues.fire_rate_upgrades

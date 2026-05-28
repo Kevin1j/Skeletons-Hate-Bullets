@@ -14,6 +14,7 @@ var weapon_dict = {
 
 func _ready():
 	super()
+	movement_speed = base_movement_speed + GlobalValues.speed_upgrades * 3
 	
 
 func get_input():
@@ -26,6 +27,7 @@ func get_input():
 		weapon.rotation = direction_to_mouse.angle() + PI
 
 func _process(_delta):
+	"""optimization could be made to just update speed when upgraded and not every frame"""
 	var mouse_pos = get_global_mouse_position()
 	if mouse_pos.x <= global_position.x:
 		player_sprite.flip_h = false
@@ -70,6 +72,8 @@ func _equip_weapon(weapon_name):
 		weapon = new_gun
 		GlobalValues.weapon_equipped = weapon_name
 		
-		
+func _upgrade_happened():
+	movement_speed = base_movement_speed + GlobalValues.speed_upgrades * 3
+	weapon.update_stats()
 		
 		

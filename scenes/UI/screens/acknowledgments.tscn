@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rvxur3fo3vq7"]
 
 [ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="1_qwjey"]
-[ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/enemies/skeleton_loves_bullets.png" id="2_eid13"]
+[ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/Characters/skeleton_loves_bullets.png" id="2_eid13"]
 
 [node name="Acknowledgments" type="Control" unique_id=1763222354]
 layout_mode = 3

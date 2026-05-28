@@ -1,9 +1,52 @@
 [gd_scene format=3 uid="uid://bsahb4441lmvx"]
 
-[node name="WizardBoard" type="Control" unique_id=924221419]
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="1_aq2ne"]
+[ext_resource type="Script" uid="uid://c6ix02bmgojnu" path="res://scenes/UI/wizard_board.gd" id="2_87r86"]
+
+[node name="Control" type="Control" unique_id=798388219]
+z_index = 1
 layout_mode = 3
+anchors_preset = 0
+offset_left = 18.0
+offset_top = -21.94
+offset_right = 279.111
+offset_bottom = 60.23799
+scale = Vector2(0.4, 0.4)
+mouse_filter = 2
+theme = ExtResource("1_aq2ne")
+script = ExtResource("2_87r86")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=764102695]
+z_index = 5
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=518203675]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=1309605990]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "+10% Damage: 100 Bones"
+
+[node name="Button2" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=438743447]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "+10% Fire Rate: 100 Bones"
+
+[node name="Button3" type="Button" parent="ScrollContainer/HBoxContainer" unique_id=1661898330]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "+3 Speed: 40 Bones"
+
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]

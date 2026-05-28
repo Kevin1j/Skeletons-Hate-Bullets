@@ -24,6 +24,9 @@ func _ready():
 func take_damage(amount):
 	current_health -= amount
 	if current_health <= 0: die()
+	scale = Vector2(0.8, 1.2)
+	await get_tree().create_timer(0.1).timeout
+	scale = Vector2(1,1)
 		
 func die():
 	var current_kills = Achievements.get(enemy_type + "s_killed")
