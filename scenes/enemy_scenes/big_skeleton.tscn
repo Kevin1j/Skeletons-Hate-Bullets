@@ -76,21 +76,21 @@ animations = [{
 size = Vector2(9, 27)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iipm7"]
-radius = 2.00976
-height = 4.30663
+radius = 3.9166665
+height = 7.833333
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bg20q"]
 radius = 34.0
 
 [node name="BigSkeleton" type="CharacterBody2D" unique_id=2007879671 groups=["enemies"]]
-collision_layer = 0
-collision_mask = 0
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_bg20q")
-attack_range = 200
+attack_range = 20
 bones = 3
 enemy_type = "big_skeleton"
 enemy_score = 5
-movement_speed = 350
+movement_speed = 60
 max_health = 300
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1730260414]
@@ -109,8 +109,8 @@ collision_mask = 2
 position = Vector2(-2.5, -3.5000005)
 shape = SubResource("RectangleShape2D_iposf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=938048244]
-position = Vector2(-2.405, 6.948)
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=938048244]
+position = Vector2(-2.405, 6.373)
 scale = Vector2(1.38, 1.38)
 shape = SubResource("CapsuleShape2D_iipm7")
 

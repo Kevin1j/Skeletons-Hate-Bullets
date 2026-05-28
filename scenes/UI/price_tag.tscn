@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bn5f7xa4dcbdh"]
+
+[ext_resource type="Texture2D" uid="uid://cnyr56axcdmbd" path="res://sprites/player/weapons/price_tag.png" id="1_cffnr"]
+[ext_resource type="Script" uid="uid://cc3ddcfya8xim" path="res://scripts/UI/gun_board/price_tag.gd" id="1_jk1c0"]
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="2_sp87o"]
+
+[node name="Control" type="Control" unique_id=1656956073]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jk1c0")
+
+[node name="PriceTag" type="Sprite2D" parent="." unique_id=1234172624]
+scale = Vector2(5, 5)
+texture = ExtResource("1_cffnr")
+
+[node name="Label" type="Label" parent="." unique_id=2040933926]
+layout_mode = 0
+offset_left = -27.210882
+offset_top = 19.047619
+offset_right = 10.884352
+offset_bottom = 42.04762
+rotation = -0.8063421
+theme = ExtResource("2_sp87o")
+theme_override_font_sizes/font_size = 24
+text = "100"

@@ -16,10 +16,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnw1r"]
-size = Vector2(46.5, 19.975)
+size = Vector2(61.25, 19.975)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70emg"]
-size = Vector2(50, 6.95)
+size = Vector2(63.885, 6.95)
 
 [node name="Stand" type="Node2D" unique_id=247839257]
 y_sort_enabled = true
@@ -27,9 +27,9 @@ script = ExtResource("1_70emg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=938101264]
 position = Vector2(-20.8, 1.0000005)
-scale = Vector2(0.025, 0.025)
 sprite_frames = SubResource("SpriteFrames_lnw1r")
-offset = Vector2(0, -314)
+offset = Vector2(54.53, -20.94)
+flip_h = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1075541699]
 position = Vector2(0.2, 0)
@@ -40,17 +40,14 @@ offset = Vector2(0, -7)
 position = Vector2(0.20000076, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActivateArea" unique_id=1750590072]
-position = Vector2(-1.4500008, 15.0125)
+position = Vector2(14.174999, 15)
 shape = SubResource("RectangleShape2D_lnw1r")
 
 [node name="HitBox" type="StaticBody2D" parent="." unique_id=1969082243]
 position = Vector2(0.20000076, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=444374275]
-position = Vector2(-5.200001, 2)
+position = Vector2(15.857498, 2)
 shape = SubResource("RectangleShape2D_70emg")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=326601480]
-
-[connection signal="body_entered" from="ActivateArea" to="." method="_on_activate_area_body_entered"]
-[connection signal="body_exited" from="ActivateArea" to="." method="_on_activate_area_body_exited"]

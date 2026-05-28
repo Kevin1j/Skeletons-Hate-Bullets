@@ -10,7 +10,7 @@ func _ready():
 		
 
 func _on_back_button_pressed() -> void:
-		get_tree().change_scene_to_file("res://scenes/UI/title_screens/title.tscn")
+		get_tree().change_scene_to_file("res://scenes/UI/screens/title.tscn")
 
 func completed(rect):
 	rect.get_node("CheckBox").button_pressed = true

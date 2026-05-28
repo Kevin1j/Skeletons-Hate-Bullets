@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dpgafe22eqvib" path="res://sprites/enemies/skeleton_loves_bullets.png" id="3_lfj20"]
 [ext_resource type="Texture2D" uid="uid://gfsx6oibvibn" path="res://sprites/player/weapons/deagle_0001.png" id="4_qg7gu"]
 [ext_resource type="Texture2D" uid="uid://lwqd7fu54oas" path="res://sprites/player/weapons/deagle_0002.png" id="5_lixc6"]
+[ext_resource type="PackedScene" uid="uid://bn5f7xa4dcbdh" path="res://scenes/UI/price_tag.tscn" id="6_s8xds"]
 [ext_resource type="Texture2D" uid="uid://csnsa1usrutml" path="res://sprites/player/weapons/ump_45_0001.png" id="7_pcy7a"]
 [ext_resource type="Texture2D" uid="uid://hnq0ixi2kfgw" path="res://sprites/player/weapons/ump_45_0002.png" id="8_lfj20"]
 
@@ -46,19 +47,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -819.0
-offset_top = -333.0
-offset_right = -744.969
-offset_bottom = -312.45737
+offset_left = -659.0
+offset_top = -310.0
+offset_right = -584.969
+offset_bottom = -289.45737
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(6.81, 6.81)
+scale = Vector2(5, 5)
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource("2_tsyv0")
 texture_pressed = ExtResource("3_hafcg")
 texture_hover = ExtResource("3_hafcg")
 stretch_mode = 3
+
+[node name="Control" parent="TextureRect/ak_47" unique_id=1656956073 instance=ExtResource("6_s8xds")]
+layout_mode = 0
+offset_left = 16.005875
+offset_top = 15.565345
+offset_right = 16.005875
+offset_bottom = 15.565345
+scale = Vector2(0.2, 0.2)
 
 [node name="deagle" type="TextureButton" parent="TextureRect" unique_id=1817434059]
 layout_mode = 1
@@ -67,11 +76,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -155.00006
-offset_top = -302.0
-offset_right = -128.90356
-offset_bottom = -285.114
-scale = Vector2(5.675, 5.675)
+offset_left = -30.0
+offset_top = -309.0
+offset_right = -3.9035034
+offset_bottom = -292.114
+scale = Vector2(5, 5)
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource("4_qg7gu")
@@ -80,6 +89,15 @@ texture_hover = ExtResource("5_lixc6")
 stretch_mode = 3
 flip_h = true
 
+[node name="Control" parent="TextureRect/deagle" unique_id=1740846003 instance=ExtResource("6_s8xds")]
+layout_mode = 0
+offset_left = -3.2000027
+offset_top = 23.4
+offset_right = -3.2000027
+offset_bottom = 23.4
+scale = Vector2(0.2, 0.2)
+price = 500
+
 [node name="ump_45" type="TextureButton" parent="TextureRect" unique_id=867364390]
 layout_mode = 1
 anchors_preset = -1
@@ -87,11 +105,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -368.0
-offset_top = -128.00003
-offset_right = -306.0
-offset_bottom = -98.00003
-scale = Vector2(4.98, 4.98)
+offset_left = -244.0
+offset_top = -118.0
+offset_right = -182.0
+offset_bottom = -88.0
+scale = Vector2(5, 5)
 toggle_mode = true
 action_mode = 0
 texture_normal = ExtResource("7_pcy7a")
@@ -99,6 +117,15 @@ texture_pressed = ExtResource("8_lfj20")
 texture_hover = ExtResource("8_lfj20")
 stretch_mode = 3
 flip_h = true
+
+[node name="Control" parent="TextureRect/ump_45" unique_id=1126525640 instance=ExtResource("6_s8xds")]
+layout_mode = 0
+offset_left = -1.6064281
+offset_top = 20.080324
+offset_right = -1.6064281
+offset_bottom = 20.080324
+scale = Vector2(0.2, 0.2)
+price = 150
 
 [connection signal="pressed" from="TextureRect/ak_47" to="." method="_on_ak_47_pressed"]
 [connection signal="pressed" from="TextureRect/deagle" to="." method="_on_deagle_pressed"]

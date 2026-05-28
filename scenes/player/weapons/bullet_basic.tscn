@@ -8,10 +8,10 @@ radius = 2.04551
 
 [node name="BulletBasic" type="Area2D" unique_id=1157807375]
 y_sort_enabled = true
-scale = Vector2(3.567, 3.567)
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_4x6ae")
+speed = 300
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=151506243]
 texture = ExtResource("2_7eagm")

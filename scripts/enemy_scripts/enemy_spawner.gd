@@ -5,16 +5,18 @@ var interval = 1 #seconds between enemy spawn
 @export var restart: Control
 @export var SwordSkeleton: PackedScene 
 @export var BigSkeleton: PackedScene
-@export var spawn_circle: float = 4000
+@export var spawn_circle: float = 0
 var spawnables
 
+signal enemy_spawned(enemy: Enemy)
 
 func _ready():	
 	spawn_loop()
-	restart.round_over.connect(end_round)
+	#restart.round_over.connect(end_round)
 	
 func end_round():
 	ScoreManager.time = 0.00
+	queue_free()
 	
 func spawn_loop():
 	var random_pos = Vector2.ZERO
@@ -22,9 +24,9 @@ func spawn_loop():
 	while true:
 		await get_tree().create_timer(interval).timeout
 		if interval > 0:
-			interval = 1 - 0.0001 * ScoreManager.time**2
+			interval = .9 - 0.00003 * ScoreManager.time**2
 		else:
-			interval = 0.08
+			interval = 0.3
 		var spawn_chance = randi_range(0,99)
 		if spawn_chance < 5 + 10/(1000-ScoreManager.time): #5% change to spawn big skeleton
 			spawn = BigSkeleton
@@ -35,7 +37,7 @@ func spawn_loop():
 		var is_valid_pos = false
 		var attempts = 0 #prevent an infinite while loop
 		while attempts < 100:
-			random_pos = Vector2(randf_range(672, 8348), randf_range(-4798, 3279))
+			random_pos = Vector2(randf_range(368, 1023), randf_range(527, 176))
 			var distance = random_pos.distance_to(player.global_position)
 			if distance > spawn_circle:
 				is_valid_pos = true
@@ -52,6 +54,6 @@ func spawn_enemy(bad_guy, pos):
 	#var screen_size = get_viewport_rect().size
 	var skeleton = bad_guy.instantiate()
 	skeleton.position = pos  
-	skeleton.scale = Vector2(6.5,6.5)
+	skeleton.scale = Vector2(1,1)
+	enemy_spawned.emit(skeleton)
 	get_tree().current_scene.add_child(skeleton)
-		

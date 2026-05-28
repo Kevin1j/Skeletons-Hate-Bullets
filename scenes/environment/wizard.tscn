@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dy1gprky0lqvb"]
+
+[ext_resource type="Texture2D" uid="uid://cvt81n75j1vc5" path="res://sprites/Characters/wizard.png" id="1_jipef"]
+[ext_resource type="Script" uid="uid://brrvk0yskllvc" path="res://scripts/environment/wizard.gd" id="1_mmpyl"]
+[ext_resource type="Texture2D" uid="uid://6sbvfmyfs2fr" path="res://sprites/Characters/wizard_pot.png" id="2_mmpyl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmpyl"]
+size = Vector2(29, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsf07"]
+size = Vector2(21, 7)
+
+[node name="Wizard" type="Node2D" unique_id=1354272295]
+script = ExtResource("1_mmpyl")
+
+[node name="WizardSprite" type="Sprite2D" parent="." unique_id=525495693]
+texture = ExtResource("1_jipef")
+offset = Vector2(0, -7.73)
+
+[node name="PotSprite" type="Sprite2D" parent="." unique_id=930429478]
+position = Vector2(13, 9)
+texture = ExtResource("2_mmpyl")
+offset = Vector2(0, -7.73)
+
+[node name="ActivateArea" type="Area2D" parent="." unique_id=1873088370]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActivateArea" unique_id=1713371737]
+position = Vector2(5, 10.5)
+shape = SubResource("RectangleShape2D_mmpyl")
+
+[node name="HitBox" type="StaticBody2D" parent="." unique_id=337043243]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1840651035]
+position = Vector2(7, -1)
+shape = SubResource("RectangleShape2D_xsf07")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=685959352]

@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cgxpiwmuxmwrv"]
+
+[ext_resource type="Theme" uid="uid://cam5fd3x2y36f" path="res://title_theme.tres" id="2_nmyol"]
+
+[node name="InteractPopup" type="Control" unique_id=791104380]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1468360275]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.5
+offset_top = -4.75
+offset_right = 19.5
+offset_bottom = 4.75
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8089983, 0.8089983, 0.8089982, 0.43137255)
+
+[node name="Label" type="Label" parent="." unique_id=1788922146]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.375
+offset_top = -3.5
+offset_right = 19.375
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nmyol")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "\"E\" to Interact"
+horizontal_alignment = 1
+vertical_alignment = 1

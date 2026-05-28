@@ -7,13 +7,16 @@ class_name Enemy
 @export var enemy_score = 1 #How many points is the enemy worth when killed? 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hit_box = $HitBox
+@onready var collision_box = $CollisionBox
 
 var is_dead = false
 var is_collectible = false
 
 signal collected
+signal died(enemy_type: String, enemy_position: Vector2)
 
 func _ready():
+	max_health += 0.2*ScoreManager.time
 	super._ready()
 	add_to_group("enemies")
 	hit_box.body_entered.connect(_on_hit_box_body_entered)
@@ -27,6 +30,8 @@ func die():
 	Achievements.set(enemy_type + "s_killed", current_kills + 1)
 	if is_dead: return
 	is_dead = true
+	died.emit(self, global_position)
+	collision_box.queue_free()
 	animated_sprite.play("die")
 	if not GlobalValues.dead: increase_score(enemy_score)
 	await animated_sprite.animation_finished
