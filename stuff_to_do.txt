@@ -8,7 +8,7 @@ v0.1.0:
 	x7. Add UMP-45 bullet spray. 
 
 v0.1.1: Guns
-	1. Skeletons drop health, some sort of ability. 
+	x1. Skeletons drop health, some sort of ability. 
 	2. Witch NPC that can deposit bones into a cauldron to level up the amount of bones recieved form enemies
 	3. P290 implemented into the gun board as a playable weapon
 	4. Glock-19 implemented into the gun baord as a playable weapon

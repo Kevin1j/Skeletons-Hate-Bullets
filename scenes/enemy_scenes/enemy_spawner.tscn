@@ -3,9 +3,11 @@
 [ext_resource type="Script" uid="uid://drh6n3qig0l87" path="res://scripts/enemy_scripts/enemy_spawner.gd" id="1_kfp6v"]
 [ext_resource type="PackedScene" uid="uid://dxw6vjf3lj0da" path="res://scenes/enemy_scenes/sword_skeleton.tscn" id="2_14nte"]
 [ext_resource type="PackedScene" uid="uid://b86plcffyftqj" path="res://scenes/enemy_scenes/big_skeleton.tscn" id="3_lopk2"]
+[ext_resource type="PackedScene" uid="uid://ks1lptjrlaam" path="res://scenes/enemy_scenes/bow_skeleton.tscn" id="4_14nte"]
 
 [node name="EnemySpawner" type="Node2D" unique_id=1508042116]
 scale = Vector2(0.049999986, 0.049999986)
 script = ExtResource("1_kfp6v")
 SwordSkeleton = ExtResource("2_14nte")
 BigSkeleton = ExtResource("3_lopk2")
+BowSkeleton = ExtResource("4_14nte")

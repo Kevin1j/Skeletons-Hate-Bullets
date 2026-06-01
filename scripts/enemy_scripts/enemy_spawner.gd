@@ -5,7 +5,8 @@ var interval = 1 #seconds between enemy spawn
 @export var restart: Control
 @export var SwordSkeleton: PackedScene 
 @export var BigSkeleton: PackedScene
-@export var spawn_circle: float = 40
+@export var BowSkeleton: PackedScene
+@export var spawn_circle: float = 200
 var spawnables
 
 signal enemy_spawned(enemy: Enemy)
@@ -23,17 +24,16 @@ func spawn_loop():
 	var spawn #holds the enemy that spawns
 	while true:
 		await get_tree().create_timer(interval).timeout
-		if interval > 0:
-			interval = .9 - 0.00003 * ScoreManager.time**2
+		var round_time = ScoreManager.time
+		if interval >= 0.3:
+			interval = 0.9 - 0.00003 * ScoreManager.time**2
 		else:
 			interval = 0.3
-		var spawn_chance = randi_range(0,99)
-		if spawn_chance < 5 + 10/(1000-ScoreManager.time): #5% change to spawn big skeleton
+		spawn = SwordSkeleton
+		if randf_range(0,1) < .05 + (.2 * (round_time/(500+round_time))):
 			spawn = BigSkeleton
-		elif spawn_chance < 0:
-			pass #change to give other skeletons a change to spawn
-		else:
-			spawn = SwordSkeleton
+		if randf_range(0,1) < (0.05+(.1 * (round_time/(500+round_time)))) and round_time > 45:
+			spawn = BowSkeleton
 		var is_valid_pos = false
 		var attempts = 0 #prevent an infinite while loop
 		while attempts < 100:
@@ -41,9 +41,9 @@ func spawn_loop():
 			var distance = random_pos.distance_to(player.global_position)
 			if distance > spawn_circle:
 				is_valid_pos = true
+				spawn_enemy(spawn, random_pos)
+				attempts = 100
 			attempts += 1
-		if is_valid_pos:
-			spawn_enemy(spawn, random_pos)
 
 func _process(_delta):
 	ScoreManager.time += _delta

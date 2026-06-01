@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://ks1lptjrlaam"]
+
+[ext_resource type="Script" uid="uid://djn83xthymvwu" path="res://scripts/enemy_scripts/bow_skeleton.gd" id="1_qlfcm"]
+[ext_resource type="Texture2D" uid="uid://mig5dv3lrh2x" path="res://sprites/enemies/bow_skeleton/bow_skeleton_attack_0001.png" id="2_qlfcm"]
+[ext_resource type="Texture2D" uid="uid://dvhrwyf0dr6gv" path="res://sprites/enemies/bow_skeleton/bow_skeleton_attack_0002.png" id="3_1on3u"]
+[ext_resource type="Texture2D" uid="uid://coe07t4cf5gql" path="res://sprites/enemies/bow_skeleton/bow_skeleton_attack_0003.png" id="4_yn1mc"]
+[ext_resource type="Texture2D" uid="uid://mf7phsiirv2h" path="res://sprites/enemies/bow_skeleton/bow_skeleton_attack_0004.png" id="5_fme5a"]
+[ext_resource type="Texture2D" uid="uid://v6tfl0b8b4j8" path="res://sprites/enemies/bow_skeleton/bow_skeleton_attack_0005.png" id="6_fku0h"]
+[ext_resource type="Texture2D" uid="uid://cc27sg788nut" path="res://sprites/enemies/bow_skeleton/bow_skeleton_Walk_0001.png" id="7_fku0h"]
+[ext_resource type="Texture2D" uid="uid://ivvi62golekj" path="res://sprites/enemies/bow_skeleton/bow_skeleton_death_0001.png" id="7_qpetm"]
+[ext_resource type="Texture2D" uid="uid://dc0a4n7wshhgp" path="res://sprites/enemies/bow_skeleton/bow_skeleton_attack_0006.png" id="7_u6rf7"]
+[ext_resource type="Texture2D" uid="uid://dlfeyf8g5kmxu" path="res://sprites/enemies/bow_skeleton/bow_skeleton_Walk_0002.png" id="8_1yh81"]
+[ext_resource type="Texture2D" uid="uid://1y3q466gahuj" path="res://sprites/enemies/bow_skeleton/bow_skeleton_death_0002.png" id="8_u6rf7"]
+[ext_resource type="Texture2D" uid="uid://cl4vdcqblcb3h" path="res://sprites/enemies/bow_skeleton/bow_skeleton_death_0003.png" id="9_eqnhq"]
+[ext_resource type="Texture2D" uid="uid://c638tl2gcrk0o" path="res://sprites/enemies/bow_skeleton/bow_skeleton_Walk_0003.png" id="9_f4gup"]
+[ext_resource type="Texture2D" uid="uid://bg8j382y5ovf8" path="res://sprites/enemies/bow_skeleton/bow_skeleton_death_0004.png" id="10_ldmul"]
+[ext_resource type="Texture2D" uid="uid://8ktnsawct5wc" path="res://sprites/enemies/bow_skeleton/bow_skeleton_Walk_0004.png" id="10_tu5qi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_43070"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qlfcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1on3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yn1mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fme5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fku0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u6rf7")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qpetm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u6rf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eqnhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ldmul")
+}],
+"loop": false,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fku0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1yh81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f4gup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_tu5qi")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iposf"]
+size = Vector2(8, 17)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iipm7"]
+radius = 2.8985507
+height = 5.7971015
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bg20q"]
+radius = 467.47192
+
+[node name="BowSkeleton" type="CharacterBody2D" unique_id=2007879671 groups=["enemies"]]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_qlfcm")
+attack_range = 130
+bones = 2
+enemy_type = "bow_skeleton"
+base_movement_speed = 30
+max_health = 150
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1730260414]
+sprite_frames = SubResource("SpriteFrames_43070")
+animation = &"attack"
+offset = Vector2(1.961, -4.472)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=834985339]
+target_desired_distance = 100.0
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1290220271]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=189130367]
+position = Vector2(1, -4.5)
+shape = SubResource("RectangleShape2D_iposf")
+
+[node name="CollisionBox" type="CollisionShape2D" parent="." unique_id=938048244]
+position = Vector2(0, 1)
+scale = Vector2(1.38, 1.38)
+shape = SubResource("CapsuleShape2D_iipm7")
+
+[node name="WeaponHitBox" type="Area2D" parent="." unique_id=1114577033]
+visible = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponHitBox" unique_id=733760152]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_bg20q")

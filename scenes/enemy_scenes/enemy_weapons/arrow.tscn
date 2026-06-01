@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b8lx18oto0wec"]
+
+[ext_resource type="Script" uid="uid://fg7i5dy0w2au" path="res://scripts/enemy_scripts/enemy_weapon_scripts/arrow.gd" id="1_2o7ug"]
+[ext_resource type="Texture2D" uid="uid://bfqq6asunjivq" path="res://sprites/enemies/bow_skeleton/arrow_0002.png" id="2_dwu76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwu76"]
+size = Vector2(0.9421756, 1)
+
+[node name="Arrow" type="Area2D" unique_id=1028691916]
+script = ExtResource("1_2o7ug")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=48407441]
+texture = ExtResource("2_dwu76")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1210950133]
+position = Vector2(1.9064381, -2.0515718)
+rotation = -0.82205
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_dwu76")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=124862388]
+visible = false

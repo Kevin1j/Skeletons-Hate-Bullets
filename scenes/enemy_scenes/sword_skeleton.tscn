@@ -140,12 +140,9 @@ shape = SubResource("RectangleShape2D_805g7")
 position = Vector2(0, 0.448)
 shape = SubResource("CapsuleShape2D_805g7")
 
-[node name="SwordHitBox" type="Area2D" parent="." unique_id=260751307]
+[node name="WeaponHitBox" type="Area2D" parent="." unique_id=260751307]
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox" unique_id=1945487140]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponHitBox" unique_id=1945487140]
 position = Vector2(6, -5.5)
 shape = SubResource("RectangleShape2D_fl3t7")
-
-[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
-[connection signal="body_entered" from="SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]

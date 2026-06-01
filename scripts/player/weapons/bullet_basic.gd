@@ -2,7 +2,7 @@ extends Area2D
 
 @export var speed = 500
 @export var damage = 50
-var direction := Vector2.ZERO
+var direction = Vector2.ZERO
 var pierce = 0
 var _enemies_pierced = 0
 var player_velocity: Vector2 = Vector2.ZERO

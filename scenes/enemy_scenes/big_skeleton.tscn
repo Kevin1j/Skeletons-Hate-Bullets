@@ -87,6 +87,7 @@ collision_layer = 16
 collision_mask = 16
 script = ExtResource("1_bg20q")
 attack_range = 20
+damage = 35
 bones = 3
 enemy_type = "big_skeleton"
 enemy_score = 5
@@ -114,12 +115,9 @@ position = Vector2(-2.405, 6.373)
 scale = Vector2(1.38, 1.38)
 shape = SubResource("CapsuleShape2D_iipm7")
 
-[node name="SwordHitBox" type="Area2D" parent="." unique_id=1114577033]
+[node name="WeaponHitBox" type="Area2D" parent="." unique_id=1114577033]
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SwordHitBox" unique_id=733760152]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeaponHitBox" unique_id=733760152]
 position = Vector2(-1, 1)
 shape = SubResource("CircleShape2D_bg20q")
-
-[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
-[connection signal="body_entered" from="SwordHitBox" to="." method="_on_sword_hit_box_body_entered"]
