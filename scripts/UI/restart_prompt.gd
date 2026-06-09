@@ -45,7 +45,7 @@ func _on_menu_button_pressed() -> void:
 	player_node.reset_health()
 	await get_tree().process_frame
 	player_node.current_health = 100
-	get_tree().change_scene_to_file("res://scenes/UI/title_screens/title.tscn")
+	get_tree().change_scene_to_file("res://scenes/UI/screens/title.tscn")
 	
 func stop():
 	for baddie in get_tree().get_nodes_in_group("enemies"):

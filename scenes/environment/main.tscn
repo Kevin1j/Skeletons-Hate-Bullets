@@ -152,11 +152,13 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(79, -826, 64, 595, 1430
 size = Vector2(27.91499, 8.783412)
 
 [node name="main" type="Node2D" unique_id=1139964207 node_paths=PackedStringArray("player_node")]
+process_mode = 3
 y_sort_enabled = true
 script = ExtResource("1_tbgi4")
 player_node = NodePath("player")
 
 [node name="world_main" type="Node2D" parent="." unique_id=320539962 node_paths=PackedStringArray("environment_layer", "trigger_area", "player", "restart")]
+process_mode = 1
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("2_a8y0u")
@@ -205,9 +207,11 @@ player = NodePath("../../player")
 interact = ExtResource("11_mcf35")
 
 [node name="player" parent="." unique_id=1938038777 instance=ExtResource("6_tipki")]
+process_mode = 1
 position = Vector2(700, 600)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1944493254]
+process_mode = 1
 
 [node name="ScoreCounter" parent="CanvasLayer" unique_id=2120624639 instance=ExtResource("8_tipki")]
 layer = 0

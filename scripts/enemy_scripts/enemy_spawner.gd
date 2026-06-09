@@ -23,7 +23,8 @@ func spawn_loop():
 	var random_pos = Vector2.ZERO
 	var spawn #holds the enemy that spawns
 	while true:
-		await get_tree().create_timer(interval).timeout
+		await get_tree().create_timer(interval, false).timeout
+		#await get_tree().create_timer(interval).timeout
 		var round_time = ScoreManager.time
 		if interval >= 0.3:
 			interval = 0.9 - 0.00003 * ScoreManager.time**2
@@ -56,4 +57,5 @@ func spawn_enemy(bad_guy, pos):
 	skeleton.position = pos  
 	skeleton.scale = Vector2(1,1)
 	enemy_spawned.emit(skeleton)
-	get_tree().current_scene.add_child(skeleton)
+	get_parent().add_child(skeleton)
+	#get_tree().current_scene.add_child(skeleton)
