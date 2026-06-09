@@ -4,6 +4,7 @@ extends Node
 @onready var ak_47 = $TextureRect/ak_47
 @onready var deagle = $TextureRect/deagle
 @onready var ump_45 = $TextureRect/ump_45
+@onready var glock18 = $TextureRect/glock18
 var gun_selected = ak_47
 var guns = []
 
@@ -13,6 +14,7 @@ func _ready():
 	guns.append(ak_47)
 	guns.append(deagle)
 	guns.append(ump_45)
+	guns.append(glock18)
 	for gun in guns:
 		validate_state(gun)
 
@@ -24,6 +26,10 @@ func _on_deagle_pressed() -> void:
 
 func _on_ump_45_pressed() -> void:
 	weapon_pressed(ump_45)
+	
+func _on_glock_18_pressed() -> void:
+	weapon_pressed(glock18)
+
 	
 func weapon_pressed(weapon):
 	var price_tag = weapon.get_child(0)

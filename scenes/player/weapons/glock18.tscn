@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://boym8jsjsokw5"]
+
+[ext_resource type="Texture2D" uid="uid://dbvgu5fa4c72p" path="res://sprites/player/weapons/glock18_0001.png" id="1_feg1e"]
+[ext_resource type="Script" uid="uid://xslulkwfv4h8" path="res://scripts/player/weapons/glock18.gd" id="2_oygdu"]
+[ext_resource type="PackedScene" uid="uid://b3fqjepr1ij2u" path="res://scenes/player/weapons/bullet_basic.tscn" id="3_8cyab"]
+
+[node name="Glock18" type="Sprite2D" unique_id=1182791719]
+position = Vector2(-5, -5)
+scale = Vector2(0.32812497, 0.32812497)
+texture = ExtResource("1_feg1e")
+script = ExtResource("2_oygdu")
+bullet_scene = ExtResource("3_8cyab")
+base_damage = 150.0
+pierce = 1
+gun_position = 5.0
+
+[node name="MuzzlePoint" type="Marker2D" parent="." unique_id=1665637786]
+position = Vector2(-12.015, -4.56)

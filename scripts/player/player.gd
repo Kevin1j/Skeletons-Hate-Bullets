@@ -9,7 +9,8 @@ signal player_died
 var weapon_dict = {
 	"ak_47": preload("res://scenes/player/weapons/ak_47.tscn"),
 	"deagle": preload("res://scenes/player/weapons/deagle.tscn"),
-	"ump_45": preload("res://scenes/player/weapons/ump_45.tscn")
+	"ump_45": preload("res://scenes/player/weapons/ump_45.tscn"),
+	"glock18": preload("res://scenes/player/weapons/glock18.tscn")
 }
 
 func _ready():

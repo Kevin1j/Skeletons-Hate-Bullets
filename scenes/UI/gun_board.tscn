@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bn5f7xa4dcbdh" path="res://scenes/UI/price_tag.tscn" id="6_s8xds"]
 [ext_resource type="Texture2D" uid="uid://csnsa1usrutml" path="res://sprites/player/weapons/ump_45_0001.png" id="7_pcy7a"]
 [ext_resource type="Texture2D" uid="uid://hnq0ixi2kfgw" path="res://sprites/player/weapons/ump_45_0002.png" id="8_lfj20"]
+[ext_resource type="Texture2D" uid="uid://dbvgu5fa4c72p" path="res://sprites/player/weapons/glock18_0001.png" id="11_hk53s"]
+[ext_resource type="Texture2D" uid="uid://dg37o4dhvxjbf" path="res://sprites/player/weapons/glock18_0002.png" id="12_5nx07"]
 
 [node name="GunBoard" type="Control" unique_id=585083045]
 z_index = 2
@@ -68,6 +70,7 @@ offset_top = 15.565345
 offset_right = 16.005875
 offset_bottom = 15.565345
 scale = Vector2(0.2, 0.2)
+price = 1000
 
 [node name="deagle" type="TextureButton" parent="TextureRect" unique_id=1817434059]
 layout_mode = 1
@@ -127,6 +130,34 @@ offset_bottom = 20.080324
 scale = Vector2(0.2, 0.2)
 price = 150
 
+[node name="glock18" type="TextureButton" parent="TextureRect" unique_id=1787497773]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 139.00012
+offset_top = -216.0
+offset_right = 201.00012
+offset_bottom = -186.0
+scale = Vector2(5, 5)
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource("11_hk53s")
+texture_pressed = ExtResource("12_5nx07")
+texture_hover = ExtResource("12_5nx07")
+stretch_mode = 3
+
+[node name="Control" parent="TextureRect/glock18" unique_id=2001128233 instance=ExtResource("6_s8xds")]
+layout_mode = 0
+offset_left = 19.399971
+offset_top = 22.400003
+offset_right = 19.399971
+offset_bottom = 22.400003
+scale = Vector2(0.2, 0.2)
+
 [connection signal="pressed" from="TextureRect/ak_47" to="." method="_on_ak_47_pressed"]
 [connection signal="pressed" from="TextureRect/deagle" to="." method="_on_deagle_pressed"]
 [connection signal="pressed" from="TextureRect/ump_45" to="." method="_on_ump_45_pressed"]
+[connection signal="pressed" from="TextureRect/glock18" to="." method="_on_glock_18_pressed"]
