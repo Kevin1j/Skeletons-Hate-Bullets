@@ -21,11 +21,11 @@ func _on_player_died():
 func save_game():
 	var save_dict = {
 		"bones": ScoreManager.bones,
-		"high_score": ScoreManager.highscore,
-		"ak_47": ScoreManager.weapons_unlocked["ak_47"],
-		"deagle": ScoreManager.weapons_unlocked["deagle"],
-		"ump_45": ScoreManager.weapons_unlocked["ump_45"],
-		"glock18": ScoreManager.weapons_unlocked["glock18"],
+		"highscore": ScoreManager.highscore,
+		"weapons_unlocked": ScoreManager.weapons_unlocked,
+		"damage_upgrades": GlobalValues.damage_upgrades,
+		"fire_rate_upgrades": GlobalValues.fire_rate_upgrades,
+		"speed_upgrades": GlobalValues.speed_upgrades,
 	}
 	
 	var file = FileAccess.open("user://savegame.dat", FileAccess.WRITE)
@@ -44,8 +44,8 @@ func load_game():
 		var loaded_data = file.get_var()
 		ScoreManager.bones = loaded_data["bones"]
 		ScoreManager.highscore = loaded_data["highscore"]
-		ScoreManager.weapons_unlocked["ak_47"] = loaded_data["ak_47"]
-		ScoreManager.weapons_unlocked["deagle"] = loaded_data["deagle"]
-		ScoreManager.weapons_unlocked["ump_45"] = loaded_data["ump_45"]
-		ScoreManager.weapons_unlocked["glock18"] = loaded_data["glock18"]
+		ScoreManager.weapons_unlocked = loaded_data["weapons_unlocked"]
+		GlobalValues.damage_upgrades = loaded_data["damage_upgrades"]
+		GlobalValues.fire_rate_upgrades = loaded_data["fire_rate_upgrades"]
+		GlobalValues.speed_upgrades = loaded_data["speed_upgrades"]
 	print("game loaded successfully!")
